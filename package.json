@@ -5,11 +5,29 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro check && tsc --noEmit && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.0.17"
+    "astro": "2.0.17",
+    "astro-icon": "0.8.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "autoprefixer": "10.4.13",
+    "cssnano": "5.1.15",
+    "eslint": "^8.35.0",
+    "eslint-plugin-astro": "^0.23.0",
+    "open-props": "^1.5.5",
+    "postcss-html": "1.5.0",
+    "postcss-jit-props": "^1.0.12",
+    "prettier": "^2.8.4",
+    "prettier-plugin-astro": "^0.8.0",
+    "stylelint": "15.2.0",
+    "stylelint-config-html": "1.1.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^30.0.1"
   }
 }
