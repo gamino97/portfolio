@@ -95,6 +95,10 @@ svg {
   cursor: pointer;
 }
 
+.btn-primary {
+  background-color: hsl(var(--accent1));
+}
+
 h1 {
   font-size: var(--font-size-fluid-3);
 }
