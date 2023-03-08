@@ -1,0 +1,31 @@
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--size-fluid-2);
+}
+
+img {
+  --size: 250px;
+
+  border-radius: 50%;
+  height: var(--size);
+  width: var(--size);
+}
+
+div {
+  margin: var(--size-fluid-4);
+}
+
+h1 {
+  font-weight: var(--font-weight-6);
+}
+
+@media (min-width: 1024px) {
+  section {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
