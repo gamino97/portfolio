@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 130%;
+  }
+}
+@font-face {
+  font-family: Poppins;
+  src: url("/fonts/Poppins-Regular.woff2") format("woff2"),
+    url("/fonts/Poppins-Regular.woff") format("woff"),
+    url("/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("/fonts/Poppins-SemiBold.woff2") format("woff2"),
+    url("/fonts/Poppins-SemiBold.woff") format("woff"),
+    url("/fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --accent: 124, 58, 237;
+  --accent-gradient: linear-gradient(
+    45deg,
+    rgb(var(--accent)),
+    #da62c4 30%,
+    white 60%
+  );
+  --bkg: 222 47.4% 11.2%;
+  --bkg-alt: 226 58.3% 18.8%;
+  --text: 226 100% 93.9%;
+  --text-alt: 226 22.1% 73.3%;
+  --muted: 230 39% 67.8%;
+  --white: 255 100% 100%;
+  --accent1: 243 70% 65%;
+  --accent2: 184 56% 54%;
+  --accent3: 63 84% 80%
+  --gradient: linear-gradient(
+    94.55deg,
+    hsl(var(--accent2)) -4.6%,
+    hsl(var(--accent3)) 99.9%
+  );
+}
+
+html {
+  background: var(--bkg);
+}
+
+body {
+  background-color: hsl(var(--bkg));
+  font-family: Poppins, sans-serif, system-ui;
+  font-weight: 400;
+  line-height: 1.55;
+  margin: auto;
+  color: hsl(var(--text))
+}
+
+
+code {
+  font-family: Menlo, Monaco, "Lucida Console", "Liberation Mono",
+    "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+.btn {
+  color: hsl(var(--white));
+  text-decoration: none;
+  padding: var(--size-2) var(--size-fluid-4);
+  border-radius: var(--radius-1);
+  cursor: pointer;
+}
+
+h1 {
+  font-size: var(--font-size-fluid-3);
+}
+
+h2 {
+  font-size: var(--font-size-fluid-2);
+}
