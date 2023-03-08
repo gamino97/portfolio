@@ -60,14 +60,6 @@ const navLinks = [
 </script>
 
 <style>
-  .btn-menu {
-    background-color: transparent;
-    border: none;
-    display: grid;
-    place-items: center;
-    padding-inline: var(--size-2);
-  }
-
   nav {
     display: flex;
     justify-content: space-between;
@@ -76,6 +68,7 @@ const navLinks = [
     width: 100%;
     margin: auto;
     position: fixed;
+    transition: background-color 0.1s linear 0.1s;
   }
 
   .logo {
@@ -100,15 +93,30 @@ const navLinks = [
     text-align: center;
     padding: var(--size-3);
     border-bottom: 2px solid hsl(var(--muted));
+    transition: transform 0.5s;
+    z-index: -1;
+  }
+
+  .btn-menu {
+    background-color: transparent;
+    border: none;
+    display: grid;
+    place-items: center;
+    padding-inline: var(--size-2);
+    transition: transform 0.5s;
   }
 
   .btn-menu[aria-expanded="true"] + ul {
     transform: translateY(0);
   }
 
+  .btn-menu[aria-expanded="true"] {
+    transform: rotate(180deg);
+  }
+
   nav:has(.btn-menu[aria-expanded="true"]) {
     background-color: hsl(var(--bkg));
-    z-index: 999;
+    transition: background-color 0.3s linear 0.1;
   }
 
   li,
