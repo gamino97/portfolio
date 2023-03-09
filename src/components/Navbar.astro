@@ -59,6 +59,12 @@ const navLinks = [
       navBtn.getAttribute("aria-expanded") === "false" ? "true" : "false"
     );
   });
+  const navLinks = document.querySelectorAll<HTMLAnchorElement>(".nav-link");
+  navLinks.forEach((navLink) => {
+    navLink.addEventListener("click", () => {
+      navBtn.setAttribute("aria-expanded", "false");
+    });
+  });
 </script>
 <style>
   nav {
