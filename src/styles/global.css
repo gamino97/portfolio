@@ -94,6 +94,14 @@ svg {
   background-color: hsl(var(--accent1));
 }
 
+.btn-secondary {
+  background: hsl(var(--accent2));
+}
+
+.btn-muted {
+  background-color: hsl(var(--muted));
+}
+
 h1 {
   font-size: var(--font-size-fluid-3);
 }
