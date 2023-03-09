@@ -1,11 +1,39 @@
----
-import "../styles/Hero.css";
----
-
-<section>
+<section class="container">
   <img src="/photo.jpg" alt="My picture" width="128" height="128" />
   <div>
     <h1>Carlos Gamino</h1>
     <h2>Full Stack Web Developer</h2>
   </div>
 </section>
+<style>
+  section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    --size: 250px;
+
+    border-radius: 50%;
+    height: var(--size);
+    width: var(--size);
+  }
+
+  div {
+    margin: var(--size-fluid-4);
+  }
+
+  h1 {
+    font-weight: var(--font-weight-6);
+  }
+
+  @media (min-width: 1024px) {
+    section {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+</style>
