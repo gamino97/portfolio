@@ -4,5 +4,5 @@
     "stylelint-config-html",
     "stylelint-config-prettier"
   ],
-  "customSyntax": "postcss-html"
+  
 }
