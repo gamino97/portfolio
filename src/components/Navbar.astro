@@ -25,7 +25,7 @@ const navLinks = [
 ---
 
 <nav>
-  <div class="container">
+  <div class="container nav-container">
     <Icon name="logo" width={25} class="logo" />
     <div class="nav-wrapper">
       <button
@@ -66,12 +66,13 @@ const navLinks = [
     width: 100%;
   }
 
-  .container {
+  .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: var(--size-fluid-2);
     transition: background-color 0.1s linear 0.1s;
+    backdrop-filter: blur(5px);
   }
 
   .logo {
@@ -146,6 +147,7 @@ const navLinks = [
       padding: 0;
       inset: initial;
       background-color: transparent;
+      z-index: initial;
     }
 
     li[role="none"],
