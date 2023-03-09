@@ -47,7 +47,7 @@
   --white: 255 100% 100%;
   --accent1: 243 70% 65%;
   --accent2: 184 56% 54%;
-  --accent3: 63 84% 80%
+  --accent3: 63 84% 80%;
   --gradient: linear-gradient(
     94.55deg,
     hsl(var(--accent2)) -4.6%,
@@ -55,19 +55,15 @@
   );
 }
 
-html {
-  background: var(--bkg);
-}
-
 body {
   background-color: hsl(var(--bkg));
   font-family: Poppins, sans-serif, system-ui;
   font-weight: 400;
   line-height: 1.55;
+  max-width: 2000px;
   margin: auto;
-  color: hsl(var(--text))
+  color: hsl(var(--text));
 }
-
 
 code {
   font-family: Menlo, Monaco, "Lucida Console", "Liberation Mono",
@@ -75,9 +71,8 @@ code {
 }
 
 .wrapper {
-  display: grid;
-  grid-template-rows: 1fr auto;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 img,
@@ -105,4 +100,10 @@ h1 {
 
 h2 {
   font-size: var(--font-size-fluid-2);
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  max-width: 1500px;
 }
