@@ -90,12 +90,24 @@ svg {
   cursor: pointer;
 }
 
+.btn-transparent:hover {
+  background-color: rgb(255 255 255 / 5%);
+}
+
 .btn-primary {
   background-color: hsl(var(--accent1));
 }
 
+.btn-primary:hover {
+  background-color: hsl(var(--text-alt));
+}
+
 .btn-secondary {
   background: hsl(var(--accent2));
+}
+
+.btn-secondary:hover {
+  background-color: hsl(var(--muted));
 }
 
 .btn-muted {
