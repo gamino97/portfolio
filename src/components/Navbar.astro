@@ -1,6 +1,5 @@
 ---
 import { Icon } from "astro-icon";
-import "../styles/Navbar.css";
 const navLinks = [
   {
     name: "Main",
@@ -26,27 +25,29 @@ const navLinks = [
 ---
 
 <nav>
-  <Icon name="logo" width={25} class="logo" />
-  <div class="nav-wrapper">
-    <button
-      class="btn btn-menu"
-      id="menu-btn"
-      aria-expanded="false"
-      aria-label="Open mobile nav"
-    >
-      <Icon name="feather:menu" width={25} />
-    </button>
-    <ul role="navigation">
-      {
-        navLinks.map((link) => (
-          <li role="none">
-            <a href={link.url} class={`btn btn-${link.style} nav-link`}>
-              {link.name}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+  <div class="container">
+    <Icon name="logo" width={25} class="logo" />
+    <div class="nav-wrapper">
+      <button
+        class="btn btn-menu"
+        id="menu-btn"
+        aria-expanded="false"
+        aria-label="Open mobile nav"
+      >
+        <Icon name="feather:menu" width={25} />
+      </button>
+      <ul role="navigation">
+        {
+          navLinks.map((link) => (
+            <li role="none">
+              <a href={link.url} class={`btn btn-${link.style} nav-link`}>
+                {link.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </div>
 </nav>
 
@@ -59,3 +60,98 @@ const navLinks = [
     );
   });
 </script>
+<style>
+  nav {
+    position: fixed;
+    width: 100%;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--size-fluid-2);
+    transition: background-color 0.1s linear 0.1s;
+  }
+
+  .logo {
+    width: calc(var(--size-fluid-5) * 0.75);
+  }
+
+  ul,
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--size-3);
+  }
+
+  ul {
+    flex-direction: column;
+    transform: translateY(-200%);
+    position: absolute;
+    background-color: hsl(var(--bkg));
+    top: var(--size-fluid-5);
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-bottom: 2px solid hsl(var(--muted));
+    transition: transform 0.5s;
+    padding: var(--size-3);
+    z-index: -1;
+  }
+
+  .btn-menu {
+    background-color: transparent;
+    border: none;
+    display: grid;
+    place-items: center;
+    padding-inline: var(--size-2);
+    transition: transform 0.5s;
+  }
+
+  .btn-menu[aria-expanded="true"] + ul {
+    transform: translateY(0);
+  }
+
+  .btn-menu[aria-expanded="true"] {
+    transform: rotate(180deg);
+  }
+
+  .nav-container:has(.btn-menu[aria-expanded="true"]) {
+    background-color: hsl(var(--bkg));
+    transition: background-color 0.3s linear 0.1;
+  }
+
+  li[role="none"],
+  .nav-link {
+    width: 100%;
+    display: block;
+    font-size: var(--font-size-1);
+  }
+
+  @media (min-width: 768px) {
+    .nav-wrapper {
+      gap: var(--size-4);
+    }
+
+    .btn-menu {
+      display: none;
+    }
+
+    ul {
+      flex-direction: row;
+      position: static;
+      transform: translateY(0);
+      border: none;
+      padding: 0;
+      inset: initial;
+      background-color: transparent;
+    }
+
+    li[role="none"],
+    .nav-link {
+      width: initial;
+      font-size: var(--font-size-0);
+    }
+  }
+</style>
