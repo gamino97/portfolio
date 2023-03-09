@@ -1,0 +1,65 @@
+<section class="container" id="about">
+  <h2>About Me</h2>
+  <div class="about-content">
+    <img src="/photo.jpg" alt="My picture" width="128" height="128" />
+    <div class="about-text">
+      <p>
+        Hi! I’m Carlos Gamino, a Full Stack Web Developer from Xalapa, Veracruz
+        graduated in Universidad Veracruzana.
+      </p>
+      <p>I’m a passionate about technology, videogames and football.</p>
+      <p>
+        I completed a master's degree in Electronic Engineering and Computing.
+      </p>
+      <a class="btn btn-secondary" href="#">More about me</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    --size: 220px;
+
+    border-radius: 50%;
+    height: var(--size);
+    width: var(--size);
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .about-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+
+  p {
+    max-width: 45ch;
+    font-size: var(--font-size-1);
+    word-wrap: break-word;
+  }
+
+  .about-text {
+    padding: var(--size-fluid-2);
+  }
+
+  .about-text p:first-child {
+    text-indent: 2ch;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: var(--size-fluid-1);
+  }
+</style>
