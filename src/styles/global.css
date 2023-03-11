@@ -122,8 +122,20 @@ h2 {
   font-size: var(--font-size-fluid-2);
 }
 
+h3 {
+  font-size: var(--font-size-fluid-1);
+}
+
+h4 {
+  font-size: var(--font-size-fluid-0);
+}
+
 .container {
   width: 100%;
   margin: auto;
   max-width: 1500px;
+}
+
+section {
+  height: 100vh;
 }
