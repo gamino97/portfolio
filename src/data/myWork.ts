@@ -17,7 +17,7 @@ const myWorkData: Work[] = [
     url: "https://collaborative-todo.up.railway.app/",
     github: "https://github.com/gamino97/collaborative-todo",
     img: {
-      src: "collaborative-webp",
+      src: "collaborative-todo-list",
       width: 932,
       alt: "Collaborative To-Do Image",
     },

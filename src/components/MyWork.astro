@@ -1,35 +1,37 @@
 ---
 import Icon from "astro-icon";
 import myWorkData from "src/data/myWork";
+import { Image } from "@astrojs/image/components";
 import images from "@images/collaborative-webp.webp";
 ---
 
 <section class="container">
   <h2>My Work</h2>
-  <div>
+  <div class="work-card-wrapper">
     {
       myWorkData.map((work) => (
         <div class="work-card">
           <div class="icons-wrapper">
             <a href={work.url} class="icon-link">
-              <Icon name="ph:link-simple-bold" width={40} />
+              <Icon name="ph:link-simple-bold" width={60} />
+              <span>Web</span>
             </a>
             {work.github && (
               <a href={work.github} class="icon-link">
-                <Icon name="simple-icons:github" width={40} />
+                <Icon name="simple-icons:github" width={60} />
+                <span>Github</span>
               </a>
             )}
           </div>
-          <img
-            src={images}
+          <Image
+            src={import(`../images/${work.img.src}.jpg`)}
             alt={work.img.alt}
-            width={work.img.width}
-            loading="lazy"
-            decoding="async"
+            height={200}
+            format="webp"
+            position="center"
           />
           <h3>{work.name}</h3>
           <p>{work.description}</p>
-          <div class="work-content" />
         </div>
       ))
     }
@@ -42,6 +44,10 @@ import images from "@images/collaborative-webp.webp";
     position: relative;
     overflow: hidden;
     border: 5px solid hsl(var(--accent1) / 70%);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .work-content {
@@ -73,11 +79,12 @@ import images from "@images/collaborative-webp.webp";
   }
 
   .icon-link:hover {
-    background-color: hsl(var(--accent1) / 90%);
+    background-color: hsl(var(--accent1) / 95%);
   }
 
   [astro-icon] {
     color: hsl(var(--white));
+    margin: auto;
   }
 
   section {
