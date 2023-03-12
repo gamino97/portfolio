@@ -1,6 +1,12 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
+    "baseUrl": ".",
     "importsNotUsedAsValues": "error",
+    "paths": {
+      "@images/*": [
+        "src/images/*"
+      ]
+    }
   }
 }
