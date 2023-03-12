@@ -10,8 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "2.0.17",
-    "astro-icon": "0.8.0"
+    "@astrojs/image": "^0.16.0",
+    "astro": "^2.1.0",
+    "astro-icon": "0.8.0",
+    "sharp": "^0.31.3"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.54.1",
