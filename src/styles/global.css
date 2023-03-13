@@ -137,14 +137,12 @@ a {
 }
 
 .container {
+  --nav-height: calc(var(--size-fluid-5) * 0.75 + var(--size-fluid-2) * 2);
+
   width: 100%;
   margin: auto;
   max-width: 1500px;
-  padding: var(--size-fluid-2);
-}
-
-section {
-  height: 100vh;
+  padding: var(--nav-height) var(--size-fluid-2) 0;
 }
 
 label {
