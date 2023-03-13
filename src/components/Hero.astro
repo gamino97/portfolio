@@ -1,5 +1,10 @@
+---
+import myPhoto from "@images/photo.jpg";
+import { Image } from "@astrojs/image/components";
+---
+
 <section class="container">
-  <img src="/photo.jpg" alt="My picture" width="128" height="128" />
+  <Image src={myPhoto} alt="My picture" width={128} format="webp" />
   <div>
     <h1>Carlos Gamino</h1>
     <h2>Full Stack Web Developer</h2>
@@ -16,7 +21,7 @@
   }
 
   img {
-    --size: 250px;
+    --size: 300px;
 
     border-radius: 50%;
     height: var(--size);
