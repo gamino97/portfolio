@@ -1,0 +1,50 @@
+---
+export interface Props {
+  placeholder: string;
+  label: string;
+  name: string;
+}
+
+const { placeholder, label, name } = Astro.props;
+---
+
+<div class="form-control">
+  <label for={name}>{label}</label>
+  <input
+    placeholder={placeholder}
+    name={name}
+    id={name}
+    aria-describedby={name}
+  />
+</div>
+
+<style>
+  input {
+    width: 100%;
+    height: var(--size-8);
+    font: inherit;
+    font-size: var(--font-size-1);
+    flex-shrink: 1;
+    padding-left: var(--size-3);
+    padding-right: var(--size-3);
+    border-width: 1px;
+    border-color: hsl(var(--accent1) / 100%);
+    border-radius: 8px;
+    background-color: hsl(var(--bkg));
+    border-style: solid;
+    color: hsl(var(--text));
+    appearance: none;
+    margin: 0;
+    overflow: visible;
+  }
+
+  input::placeholder {
+    color: hsl(var(--text-alt));
+    opacity: 1;
+  }
+
+  input:focus {
+    outline: 2px solid hsl(var(--accent1) / 100%);
+    outline-offset: 2px;
+  }
+</style>
