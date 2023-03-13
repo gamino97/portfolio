@@ -6,11 +6,6 @@
   padding: 0;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 130%;
-  }
-}
 @font-face {
   font-family: Poppins;
   src: url("/fonts/Poppins-Regular.woff2") format("woff2"),
@@ -89,7 +84,7 @@ svg {
   border-radius: var(--radius-1);
   cursor: pointer;
   border: none;
-  font-size: var(--font-size-0);
+  font-size: var(--font-size-fluid-0);
 }
 
 .btn-transparent:hover {
