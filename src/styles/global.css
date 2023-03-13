@@ -88,6 +88,8 @@ svg {
   padding: var(--size-2) var(--size-fluid-4);
   border-radius: var(--radius-1);
   cursor: pointer;
+  border: none;
+  font-size: var(--font-size-0);
 }
 
 .btn-transparent:hover {
@@ -143,8 +145,22 @@ a {
   width: 100%;
   margin: auto;
   max-width: 1500px;
+  padding: var(--size-fluid-2);
 }
 
 section {
   height: 100vh;
+}
+
+label {
+  font-size: var(--font-size-1);
+  line-height: var(--font-lineheight-1);
+  text-align: left;
+  text-transform: uppercase;
+  padding: var(--size-2) var(--size-1);
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
 }
