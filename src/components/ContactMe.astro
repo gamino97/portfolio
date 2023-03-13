@@ -1,0 +1,121 @@
+---
+import InputText from "./InputText.astro";
+import Textarea from "./Textarea.astro";
+import { Icon } from "astro-icon";
+const contactMeLinks = [
+  {
+    href: "https://github.com/gamino97",
+    icon: "simple-icons:github",
+  },
+  {
+    href: "mailto:carlos.alfredo55@gmail.com",
+    icon: "simple-icons:gmail",
+  },
+  {
+    href: "#",
+    icon: "simple-icons:linkedin",
+  },
+];
+---
+
+<section class="container" id="contact-me">
+  <h2>Contact Me</h2>
+  <div class="contact-wrapper">
+    <div class="contact-links-wrapper">
+      {
+        contactMeLinks.map((link) => (
+          <div class="contact-link">
+            <a href={link.href} class="icon-link">
+              <Icon name={link.icon} width={256} />
+            </a>
+          </div>
+        ))
+      }
+    </div>
+    <form>
+      <InputText placeholder="Name" label="Name" name="name" />
+      <InputText placeholder="Email" label="Email" name="email" />
+      <Textarea placeholder="Message" label="Message" name="message" />
+      <div class="form-action">
+        <button class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<style>
+  .contact-links-wrapper {
+    display: flex;
+    gap: var(--size-fluid-1);
+    justify-content: space-around;
+  }
+
+  section {
+    text-align: center;
+  }
+
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-3);
+  }
+
+  button {
+    text-transform: uppercase;
+  }
+
+  .form-action {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .contact-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon-link {
+    background-color: hsl(var(--accent2) / 70%);
+    border-radius: var(--radius-2);
+    aspect-ratio: 1/1;
+    height: var(--size-fluid-6);
+    display: inline-block;
+  }
+
+  .icon-link:hover {
+    background-color: hsl(var(--accent2) / 100%);
+  }
+
+  [astro-icon] {
+    margin: auto;
+    padding: var(--size-1);
+    mask-composite: exclude;
+    color: hsl(var(--bkg));
+  }
+
+  @media (min-width: 768px) {
+    .contact-wrapper {
+      flex-direction: row;
+    }
+
+    .contact-links-wrapper {
+      width: 50%;
+      display: inline-grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    form {
+      width: 50%;
+    }
+
+    .icon-link {
+      height: var(--size-fluid-7);
+    }
+  }
+</style>
