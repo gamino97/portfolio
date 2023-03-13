@@ -11,9 +11,10 @@ const navLinks = [
     url: "#about",
     style: "transparent",
   },
+  { name: "Experience", url: "#experience", style: "transparent" },
   {
     name: "Work",
-    url: "#",
+    url: "#my-work",
     style: "transparent",
   },
   {
@@ -131,10 +132,9 @@ const navLinks = [
   .nav-link {
     width: 100%;
     display: block;
-    font-size: var(--font-size-1);
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 800px) {
     .nav-wrapper {
       gap: var(--size-4);
     }
@@ -161,7 +161,6 @@ const navLinks = [
     li[role="none"],
     .nav-link {
       width: initial;
-      font-size: var(--font-size-0);
     }
 
     .nav-container {
