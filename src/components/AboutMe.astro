@@ -1,7 +1,13 @@
+---
+import { Image } from "@astrojs/image/components";
+import myPhoto from "@images/photo.jpg";
+---
+
 <section class="container" id="about">
   <h2>About Me</h2>
   <div class="about-content">
-    <img src="/photo.jpg" alt="My picture" width="128" height="128" />
+    <Image src={myPhoto} alt="My photo" width={128} format="webp" />
+
     <div class="about-text">
       <p>
         Hi! I'm Carlos Gamino, a Full Stack Web Developer from Xalapa, Veracruz
@@ -12,25 +18,26 @@
         I completed a master's degree in Electronic Engineering and Computer
         Science.
       </p>
-      <a class="btn btn-secondary" href="#">More about me</a>
+      <div class="about-me-actions">
+        <a class="btn btn-secondary" href="#">More about me</a>
+      </div>
     </div>
   </div>
 </section>
 
 <style>
-  section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   img {
-    --size: 180px;
+    --size: 200px;
 
     border-radius: 50%;
     height: var(--size);
     width: var(--size);
+    margin: 0 0 var(--size-fluid-3);
+  }
+
+  .about-me-actions {
+    width: 60ch;
+    margin: auto;
   }
 
   h2 {
