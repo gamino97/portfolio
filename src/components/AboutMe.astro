@@ -19,7 +19,7 @@ import myPhoto from "@images/photo.jpg";
         Science.
       </p>
       <div class="about-me-actions">
-        <a class="btn btn-secondary" href="#">More about me</a>
+        <button class="btn btn-secondary">More about me</button>
       </div>
     </div>
   </div>
@@ -37,7 +37,7 @@ import myPhoto from "@images/photo.jpg";
 
   .about-me-actions {
     width: 60ch;
-    margin: auto;
+    margin: var(--size-fluid-2) auto auto;
   }
 
   h2 {
@@ -72,9 +72,9 @@ import myPhoto from "@images/photo.jpg";
     margin-top: var(--size-fluid-2);
   }
 
-  a {
-    display: inline-block;
-    margin-top: var(--size-fluid-2);
+  button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
   }
 
   @media (min-width: 1024px) {
@@ -90,10 +90,6 @@ import myPhoto from "@images/photo.jpg";
 
     .about-me-actions {
       max-width: 45ch;
-    }
-
-    a {
-      margin-top: var(--size-fluid-3);
     }
 
     p {
