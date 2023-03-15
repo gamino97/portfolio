@@ -1,3 +1,5 @@
+import type { Technology } from "./typings";
+
 interface Work {
   name: string;
   description: string;
@@ -8,6 +10,7 @@ interface Work {
     width?: number;
     alt: string;
   };
+  technologies: Technology[];
 }
 
 const myWorkData: Work[] = [
@@ -21,6 +24,18 @@ const myWorkData: Work[] = [
       width: 932,
       alt: "Collaborative To-Do Image",
     },
+    technologies: [
+      { name: "Python", icon: "logos:python" },
+      {
+        name: "Flask",
+        icon: "simple-icons:flask",
+        className: "nextjs-class",
+      },
+      { name: "PostgreSQL", icon: "logos:postgresql" },
+      { name: "React", icon: "logos:react" },
+      { name: "TypeScript", icon: "logos:typescript-icon" },
+      { name: "Docker", icon: "logos:docker-icon" },
+    ],
   },
 ];
 

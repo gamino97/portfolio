@@ -14,14 +14,20 @@ const experiences: Experience[] = [
       { name: "SQL", icon: "mdi:sql-query" },
       { name: "Tailwind", icon: "logos:tailwindcss-icon" },
       { name: "React", icon: "logos:react" },
-      { name: "Next.js", icon: "logos:nextjs-icon", className: "nextjs-class" },
+      {
+        name: "Next.js",
+        icon: "simple-icons:nextdotjs",
+      },
       { name: "Docker", icon: "logos:docker-icon" },
+      { name: "Node.js", icon: "logos:nodejs-icon" },
+      { name: "Express", icon: "simple-icons:express" },
     ],
   },
   {
     name: "COVEICyDET",
     description: "7 months as junior developer",
     technologies: [
+      { name: "Python", icon: "logos:python" },
       { name: "Django", icon: "logos:django-icon" },
       { name: "Bootstrap", icon: "logos:bootstrap" },
       { name: "HTML", icon: "vscode-icons:file-type-html" },
