@@ -1,35 +1,29 @@
-import { Language } from "src/components/typings";
+import type { Translation } from "./typings";
 
-interface Translation {
-  [key: string]: {
-    [Language.English]: string;
-    [Language.Spanish]: string;
-  };
-}
 const translations: Translation = {
   buttonArial: {
-    [Language.English]: "Open mobile nav",
-    [Language.Spanish]: "Abrir navegación movil",
+    en: "Open mobile nav",
+    es: "Abrir navegación movil",
   },
   navlinkMain: {
-    [Language.English]: "Main",
-    [Language.Spanish]: "Inicio",
+    en: "Main",
+    es: "Inicio",
   },
   navlinkAbout: {
-    [Language.English]: "About",
-    [Language.Spanish]: "Sobre mí",
+    en: "About",
+    es: "Sobre mí",
   },
   navlinkExperience: {
-    [Language.English]: "Experience",
-    [Language.Spanish]: "Experiencia",
+    en: "Experience",
+    es: "Experiencia",
   },
   navlinkWork: {
-    [Language.English]: "Work",
-    [Language.Spanish]: "Proyectos",
+    en: "Work",
+    es: "Proyectos",
   },
   navlinkContact: {
-    [Language.English]: "Contact Me",
-    [Language.Spanish]: "Contáctame",
+    en: "Contact Me",
+    es: "Contáctame",
   },
 };
 
