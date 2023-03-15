@@ -1,11 +1,11 @@
 ---
 import type { BaseProps } from "./typings";
-
-export type Props = BaseProps;
-const { language } = Astro.props;
 import myPhoto from "@images/photo.jpg";
 import { Image } from "@astrojs/image/components";
 import translations from "src/data/translations/hero";
+
+const { language } = Astro.props;
+export type Props = BaseProps;
 ---
 
 <section class="container">
