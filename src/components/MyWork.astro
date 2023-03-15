@@ -2,6 +2,7 @@
 import Icon from "astro-icon";
 import myWorkData from "src/data/myWork";
 import { Image } from "@astrojs/image/components";
+import Technologies from "./Technologies.astro";
 ---
 
 <section class="container" id="my-work">
@@ -29,8 +30,11 @@ import { Image } from "@astrojs/image/components";
             format="webp"
             position="center"
           />
-          <h3>{work.name}</h3>
-          <p>{work.description}</p>
+          <div class="card-content">
+            <h3>{work.name}</h3>
+            <p>{work.description}</p>
+            <Technologies technologies={work.technologies} />
+          </div>
         </div>
       ))
     }
@@ -38,6 +42,13 @@ import { Image } from "@astrojs/image/components";
 </section>
 
 <style>
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-fluid-2);
+    padding: var(--size-fluid-2) 0;
+  }
+
   .work-card {
     width: var(--size-fluid-10);
     position: relative;
