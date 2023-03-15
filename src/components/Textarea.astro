@@ -15,7 +15,10 @@ const { placeholder, label, name } = Astro.props;
     rows="6"
     name={name}
     id={name}
-    aria-describedby={name}></textarea>
+    aria-describedby={name}
+    required
+  >
+  </textarea>
 </div>
 
 <style>
