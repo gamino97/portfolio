@@ -5,12 +5,18 @@ import AboutMe from "../components/AboutMe.astro";
 import Experience from "../components/Experience.astro";
 import MyWork from "../components/MyWork.astro";
 import ContactMe from "src/components/ContactMe.astro";
+import Footer from "src/components/Footer.astro";
+import Navbar from "src/components/Navbar.astro";
 ---
 
 <Layout title="Carlos Gamino">
-  <Hero />
-  <AboutMe />
-  <Experience />
-  <MyWork />
-  <ContactMe />
+  <Navbar />
+  <main>
+    <Hero />
+    <AboutMe />
+    <Experience />
+    <MyWork />
+    <ContactMe />
+  </main>
+  <Footer />
 </Layout>
