@@ -1,8 +1,4 @@
-interface Technology {
-  name: string;
-  icon: string;
-  className?: string;
-}
+import type { Technology } from "./typings";
 
 interface Experience {
   name: string;
