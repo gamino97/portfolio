@@ -1,0 +1,48 @@
+---
+import { Icon } from "astro-icon";
+import type { Technology } from "src/data/typings";
+
+export interface Props {
+  technologies: Technology[];
+}
+
+const { technologies } = Astro.props;
+---
+
+<ul class="technologies-wrapper">
+  {
+    technologies.map((technology) => (
+      <li>
+        <Icon
+          name={technology.icon}
+          width={25}
+          class:list={["technology-icon", technology.className]}
+        />
+        <span>{technology.name}</span>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  .technologies-wrapper {
+    display: flex;
+    gap: var(--size-fluid-1);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .technologies-wrapper > li {
+    display: flex;
+    align-items: center;
+  }
+
+  .technology-icon {
+    margin-right: var(--size-1);
+  }
+
+  span {
+    font-size: var(--font-size-0);
+  }
+</style>
