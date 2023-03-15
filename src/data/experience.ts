@@ -18,7 +18,6 @@ const experiences: Experience[] = [
         name: "Next.js",
         icon: "simple-icons:nextdotjs",
       },
-      { name: "Docker", icon: "logos:docker-icon" },
       { name: "Node.js", icon: "logos:nodejs-icon" },
       { name: "Express", icon: "simple-icons:express" },
     ],
