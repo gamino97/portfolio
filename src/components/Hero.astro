@@ -1,13 +1,18 @@
 ---
+import type { BaseProps } from "./typings";
+
+export type Props = BaseProps;
+const { language } = Astro.props;
 import myPhoto from "@images/photo.jpg";
 import { Image } from "@astrojs/image/components";
+import translations from "src/data/translations/hero";
 ---
 
 <section class="container">
   <Image src={myPhoto} alt="My picture" width={128} format="webp" />
   <div>
     <h1>Carlos Gamino</h1>
-    <h2>Full Stack Web Developer</h2>
+    <h2>{translations.heroTitle[language]}</h2>
     {/*Github and Resume */}
   </div>
 </section>
