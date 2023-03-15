@@ -5,6 +5,10 @@ const translations: Translation = {
     en: "Full Stack Web Developer",
     es: "Desarrollador Web Full Stack",
   },
+  pictureAlt: {
+    en: "My picture",
+    es: "Mi foto",
+  },
 };
 
 export default translations;

@@ -9,7 +9,12 @@ export type Props = BaseProps;
 ---
 
 <section class="container">
-  <Image src={myPhoto} alt="My picture" width={128} format="webp" />
+  <Image
+    src={myPhoto}
+    alt={translations.pictureAlt[language]}
+    width={128}
+    format="webp"
+  />
   <div>
     <h1>Carlos Gamino</h1>
     <h2>{translations.heroTitle[language]}</h2>
