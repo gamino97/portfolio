@@ -24,7 +24,7 @@ const experiences: Experience[] = [
   },
   {
     name: "COVEICyDET",
-    description: "7 months as junior developer",
+    description: "descriptionCoveicydet",
     technologies: [
       { name: "Python", icon: "logos:python" },
       { name: "Django", icon: "logos:django-icon" },

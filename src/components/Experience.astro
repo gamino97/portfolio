@@ -1,6 +1,11 @@
 ---
 import { Icon } from "astro-icon";
 import experiences from "src/data/experience";
+import translations from "src/data/translations/experience";
+import type { BaseProps } from "./typings";
+
+const { language } = Astro.props;
+export type Props = BaseProps;
 ---
 
 <section id="experience" class="container">
@@ -11,7 +16,9 @@ import experiences from "src/data/experience";
         <div class="experience">
           <h3 class="experience-name">{experience.name}</h3>
           {experience.description && (
-            <p class="experience-description">{experience.description}</p>
+            <p class="experience-description">
+              {translations[experience.description][language]}
+            </p>
           )}
           <ul class="technologies-wrapper">
             {experience.technologies.map((technology) => (
