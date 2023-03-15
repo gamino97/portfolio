@@ -1,28 +1,11 @@
 ---
 import { Icon } from "astro-icon";
-const navLinks = [
-  {
-    name: "Main",
-    url: "#",
-    style: "transparent",
-  },
-  {
-    name: "About",
-    url: "#about",
-    style: "transparent",
-  },
-  { name: "Experience", url: "#experience", style: "transparent" },
-  {
-    name: "Work",
-    url: "#my-work",
-    style: "transparent",
-  },
-  {
-    name: "Contact Me",
-    url: "#contact-me",
-    style: "primary",
-  },
-];
+import type { BaseProps } from "./typings";
+import navLinks from "src/data/navbar";
+import translations from "src/data/translations/navbar";
+
+export type Props = BaseProps;
+const { language } = Astro.props;
 ---
 
 <nav>
@@ -33,7 +16,7 @@ const navLinks = [
         class="btn btn-menu"
         id="menu-btn"
         aria-expanded="false"
-        aria-label="Open mobile nav"
+        aria-label={translations.buttonArial[language]}
       >
         <Icon name="feather:menu" width={25} />
       </button>
@@ -42,7 +25,7 @@ const navLinks = [
           navLinks.map((link) => (
             <li role="none">
               <a href={link.url} class={`btn btn-${link.style} nav-link`}>
-                {link.name}
+                {translations[link.name][language]}
               </a>
             </li>
           ))

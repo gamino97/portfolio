@@ -7,10 +7,12 @@ import MyWork from "../components/MyWork.astro";
 import ContactMe from "src/components/ContactMe.astro";
 import Footer from "src/components/Footer.astro";
 import Navbar from "src/components/Navbar.astro";
+import { Language } from "src/components/typings";
+const mainLanguage = Language.English;
 ---
 
 <Layout title="Carlos Gamino">
-  <Navbar />
+  <Navbar language={mainLanguage} />
   <main>
     <Hero />
     <AboutMe />
