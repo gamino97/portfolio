@@ -12,7 +12,8 @@ import { Image } from "@astrojs/image/components";
   </div>
 </section>
 <style>
-  section {
+  .container {
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,15 +37,15 @@ import { Image } from "@astrojs/image/components";
     font-weight: var(--font-weight-6);
   }
 
-  @media (min-width: 1024px) {
-    section {
-      flex-direction: row;
-      justify-content: space-evenly;
-    }
-  }
-
   h2 {
     color: hsl(var(--accent2) / 70%);
     margin: 0;
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
   }
 </style>
