@@ -21,17 +21,17 @@ const contactMeLinks = [
 <section class="container" id="contact-me">
   <h2>Contact Me</h2>
   <div class="contact-wrapper">
-    <div class="contact-links-wrapper">
+    <ul class="contact-links-wrapper">
       {
         contactMeLinks.map((link) => (
-          <div class="contact-link">
+          <li class="contact-link">
             <a href={link.href} class="icon-link">
               <Icon name={link.icon} width={256} />
             </a>
-          </div>
+          </li>
         ))
       }
-    </div>
+    </ul>
     <form>
       <InputText placeholder="Name" label="Name" name="name" />
       <InputText placeholder="Email" label="Email" name="email" />
