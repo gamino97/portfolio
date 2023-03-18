@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Experience from "../components/Experience.astro";
+import MyWork from "../components/MyWork.astro";
+import ContactMe from "src/components/ContactMe.astro";
+import Footer from "src/components/Footer.astro";
+import Navbar from "src/components/Navbar.astro";
+import type { BaseProps } from "./typings";
+export type Props = BaseProps;
+const { language } = Astro.props;
+---
+
+<Layout title="Carlos Gamino">
+  <Navbar language={language} />
+  <main>
+    <Hero language={language} />
+    <AboutMe language={language} />
+    <Experience language={language} />
+    <MyWork language={language} />
+    <ContactMe language={language} />
+  </main>
+  <Footer />
+</Layout>
