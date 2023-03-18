@@ -2,6 +2,12 @@
 import InputText from "./InputText.astro";
 import Textarea from "./Textarea.astro";
 import { Icon } from "astro-icon";
+import type { BaseProps } from "./typings";
+
+import translations from "src/data/translations/contactMe";
+
+export type Props = BaseProps;
+const { language } = Astro.props;
 const contactMeLinks = [
   {
     href: "https://github.com/gamino97",
@@ -19,7 +25,7 @@ const contactMeLinks = [
 ---
 
 <section class="container" id="contact-me">
-  <h2>Contact Me</h2>
+  <h2>{translations.title[language]}</h2>
   <div class="contact-wrapper">
     <ul class="contact-links-wrapper">
       {
@@ -33,11 +39,22 @@ const contactMeLinks = [
       }
     </ul>
     <form>
-      <InputText placeholder="Name" label="Name" name="name" />
-      <InputText placeholder="Email" label="Email" name="email" type="email" />
-      <Textarea placeholder="Message" label="Message" name="message" />
+      <InputText
+        placeholder={translations.nameInput[language]}
+        label={translations.nameInput[language]}
+        name="name"
+      />
+      <InputText
+        placeholder={translations.emailInput[language]}
+        label={translations.emailInput[language]}
+        name="email"
+        type="email"
+      />
+      <Textarea label={translations.messageInput[language]} name="message" />
       <div class="form-action">
-        <button class="btn btn-primary">Submit</button>
+        <button class="btn btn-primary">
+          {translations.submitButton[language]}
+        </button>
       </div>
     </form>
   </div>
