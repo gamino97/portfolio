@@ -1,16 +1,17 @@
 ---
-export interface Props {
-  placeholder: string;
+import type { HTMLAttributes } from "astro/types";
+
+export interface Props extends HTMLAttributes<"input"> {
   label: string;
-  name: string;
 }
 
-const { placeholder, label, name } = Astro.props;
+const { placeholder, label, name, type = "text" } = Astro.props;
 ---
 
 <div class="form-control">
   <label for={name}>{label}</label>
   <input
+    type={type}
     placeholder={placeholder}
     name={name}
     id={name}
