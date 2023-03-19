@@ -6,11 +6,13 @@ import translations from "src/data/translations/navbar";
 
 export type Props = BaseProps;
 const { language } = Astro.props;
+import LanguageSelector from "./LanguageSelector.astro";
 ---
 
 <nav>
   <div class="container nav-container">
     <Icon name="logo" width={25} class="logo" />
+    <LanguageSelector language={language} />
     <div class="nav-wrapper">
       <button
         class="btn btn-menu"
@@ -67,7 +69,8 @@ const { language } = Astro.props;
   }
 
   .logo {
-    width: calc(var(--size-fluid-5) * 0.75);
+    height: calc(var(--size-fluid-4) * 0.8);
+    width: auto;
   }
 
   ul,
@@ -117,7 +120,7 @@ const { language } = Astro.props;
     display: block;
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: 768px) {
     .nav-wrapper {
       gap: var(--size-4);
     }

@@ -6,11 +6,11 @@ interface NavLink {
   style: string;
 }
 const navLinks: NavLink[] = [
-  {
+  /* {
     name: "navlinkMain",
     url: "#",
     style: "transparent",
-  },
+  }, */
   {
     name: "navlinkAbout",
     url: "#about",

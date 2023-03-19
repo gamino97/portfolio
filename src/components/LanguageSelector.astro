@@ -1,0 +1,44 @@
+---
+import { Language } from "./typings";
+import type { BaseProps } from "./typings";
+export type Props = BaseProps;
+const { language } = Astro.props;
+const languageNames: Record<Language, string> = {
+  en: "🇺🇸",
+  es: "🇲🇽",
+};
+---
+
+<select class="language-selector">
+  {
+    Object.entries(Language).map(([keyLanguage, value]) => (
+      <option value={value} selected={language === value}>
+        {languageNames[value]} {keyLanguage}
+      </option>
+    ))
+  }
+</select>
+
+<script>
+  const select =
+    document.querySelector<HTMLSelectElement>(".language-selector")!;
+  select.addEventListener("change", () => {
+    let newLocation = `/${select.value}`;
+    if (select.value === "en") {
+      newLocation = "/";
+    }
+    window.location.href = newLocation;
+  });
+</script>
+
+<style>
+  .language-selector {
+    width: 40px;
+  }
+
+  @media (min-width: 1024px) {
+    .language-selector {
+      width: auto;
+    }
+  }
+</style>
