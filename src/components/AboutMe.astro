@@ -1,7 +1,7 @@
 ---
 import type { BaseProps } from "./typings";
 import { Image } from "@astrojs/image/components";
-import myPhoto from "@images/photo.jpg";
+import myDesktop from "@images/desktop.jpg";
 import translations from "src/data/translations/aboutMe";
 
 const { language } = Astro.props;
@@ -12,9 +12,9 @@ export type Props = BaseProps;
   <h2>{translations.title[language]}</h2>
   <div class="about-content">
     <Image
-      src={myPhoto}
+      src={myDesktop}
       alt={translations.photoAlt[language]}
-      width={128}
+      height={720}
       format="webp"
     />
     <div class="about-text">
@@ -27,12 +27,11 @@ export type Props = BaseProps;
 
 <style>
   img {
-    --size: 200px;
-
-    border-radius: 50%;
-    height: var(--size);
-    width: var(--size);
-    margin: 0 0 var(--size-fluid-3);
+    width: 50%;
+    height: auto;
+    margin: auto auto var(--size-fluid-2);
+    object-fit: cover;
+    padding: var(--size-fluid-2);
   }
 
   h2 {
@@ -41,10 +40,8 @@ export type Props = BaseProps;
   }
 
   .about-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   p {
@@ -56,6 +53,7 @@ export type Props = BaseProps;
 
   .about-text {
     padding: var(--size-fluid-2);
+    margin: auto;
   }
 
   .about-text p:first-child {
@@ -69,13 +67,12 @@ export type Props = BaseProps;
 
   @media (min-width: 1024px) {
     img {
-      --size: 250px;
-
+      width: 100%;
       margin: 0;
     }
 
     .about-content {
-      flex-direction: row;
+      grid-template-columns: 1fr 1fr;
     }
 
     .about-me-actions {
