@@ -1,1 +1,19 @@
-<footer></footer>
+---
+import type { BaseProps } from "./typings";
+
+import translations from "src/data/translations/footer";
+
+export type Props = BaseProps;
+const { language } = Astro.props;
+---
+
+<footer><p>{translations.text[language]}</p></footer>
+
+<style>
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--size-3) var(--size-5);
+  }
+</style>
