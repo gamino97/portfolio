@@ -9,6 +9,10 @@ const translations: Translation = {
     en: "My picture",
     es: "Mi foto",
   },
+  resume: {
+    en: "Resume",
+    es: "CV",
+  },
 };
 
 export default translations;
