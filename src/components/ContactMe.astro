@@ -12,14 +12,17 @@ const contactMeLinks = [
   {
     href: "https://github.com/gamino97",
     icon: "simple-icons:github",
+    name: "Github",
   },
   {
     href: "mailto:carlos.gamino01@gmail.com",
     icon: "simple-icons:gmail",
+    name: "Email",
   },
   {
     href: "#",
     icon: "simple-icons:linkedin",
+    name: "LinkedIn",
   },
 ];
 ---
@@ -33,6 +36,7 @@ const contactMeLinks = [
           <li class="contact-link">
             <a href={link.href} class="icon-link">
               <Icon name={link.icon} width={256} />
+              <span class="sr-only">{link.name}</span>
             </a>
           </li>
         ))
