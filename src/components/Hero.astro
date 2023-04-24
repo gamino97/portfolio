@@ -3,6 +3,8 @@ import type { BaseProps } from "./typings";
 import myPhoto from "@images/photo.jpg";
 import { Image } from "@astrojs/image/components";
 import translations from "src/data/translations/hero";
+import { Icon } from "astro-icon";
+import resume from "/curriculum-vitae-carlos-gamino.pdf";
 
 const { language } = Astro.props;
 export type Props = BaseProps;
@@ -12,16 +14,36 @@ export type Props = BaseProps;
   <Image
     src={myPhoto}
     alt={translations.pictureAlt[language]}
-    width={128}
+    width={1440}
     format="webp"
+    loading="eager"
   />
-  <div>
+  <div class="details">
     <h1>Carlos Gamino</h1>
     <h2>{translations.heroTitle[language]}</h2>
-    {/*Github and Resume */}
+    <div class="buttons">
+      <a class="btn btn-outline btn-tertiary" href={resume}>
+        <Icon width={20} name="mdi:resume" />
+        <span>Resume</span>
+      </a>
+      <a
+        class="btn btn-outline btn-tertiary"
+        href="https://github.com/gamino97"
+      >
+        <Icon width={20} name="simple-icons:github" />
+        <span>Github</span>
+      </a>
+    </div>
   </div>
 </section>
 <style>
+  a {
+    display: inline-flex;
+    gap: var(--size-2);
+    align-items: center;
+    justify-content: center;
+  }
+
   .container {
     padding: 0;
     display: flex;
@@ -37,10 +59,17 @@ export type Props = BaseProps;
     border-radius: 50%;
     height: var(--size);
     width: var(--size);
+    object-fit: cover;
   }
 
-  div {
+  .details {
     margin: var(--size-fluid-4);
+  }
+
+  .buttons {
+    display: flex;
+    gap: var(--size-4);
+    margin-top: var(--size-fluid-3);
   }
 
   h1 {
