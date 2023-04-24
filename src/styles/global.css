@@ -111,6 +111,21 @@ svg {
   background-color: hsl(var(--muted));
 }
 
+.btn-outline {
+  border: var(--border-size-1) solid currentcolor;
+  background-color: transparent;
+}
+
+.btn-outline.btn-tertiary {
+  color: hsl(var(--accent3));
+}
+
+.btn-outline.btn-tertiary:hover {
+  background-color: hsl(var(--accent3));
+  color: hsl(var(--bkg));
+  border-color: hsl(var(--accent3));
+}
+
 h1 {
   font-size: var(--font-size-fluid-3);
 }
