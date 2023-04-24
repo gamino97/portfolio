@@ -15,12 +15,7 @@ const contactMeLinks = [
     name: "Github",
   },
   {
-    href: "mailto:carlos.gamino01@gmail.com",
-    icon: "simple-icons:gmail",
-    name: "Email",
-  },
-  {
-    href: "#",
+    href: "https://www.linkedin.com/in/carlos-alfredo-gamino-aparicio-86717a273",
     icon: "simple-icons:linkedin",
     name: "LinkedIn",
   },
@@ -66,7 +61,9 @@ const contactMeLinks = [
 
 <style>
   .contact-links-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: var(--size-fluid-1);
     justify-content: space-around;
   }
@@ -99,6 +96,11 @@ const contactMeLinks = [
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .contact-link:nth-child(2) {
+    grid-column-start: 2;
+    grid-row-start: 2;
   }
 
   .icon-link {
