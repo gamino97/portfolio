@@ -8,11 +8,18 @@ import ContactMe from "src/components/ContactMe.astro";
 import Footer from "src/components/Footer.astro";
 import Navbar from "src/components/Navbar.astro";
 import type { BaseProps } from "./typings";
+import type { Translation } from "src/data/translations/typings";
 export type Props = BaseProps;
 const { language } = Astro.props;
+const translations: Translation = {
+  description: {
+    en: "Developer Carlos Gamino's portfolio.",
+    es: "Portfolio del desarrollador Carlos Gamino.",
+  },
+};
 ---
 
-<Layout title="Carlos Gamino">
+<Layout title="Carlos Gamino" description={translations.description[language]}>
   <Navbar language={language} />
   <main>
     <Hero language={language} />
