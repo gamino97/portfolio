@@ -37,7 +37,7 @@ const contactMeLinks = [
         ))
       }
     </ul>
-    <form>
+    <form action="https://formspree.io/f/mzbqykka" method="POST">
       <InputText
         placeholder={translations.nameInput[language]}
         label={translations.nameInput[language]}
@@ -51,7 +51,7 @@ const contactMeLinks = [
       />
       <Textarea label={translations.messageInput[language]} name="message" />
       <div class="form-action">
-        <button class="btn btn-primary">
+        <button class="btn btn-primary" type="submit">
           {translations.submitButton[language]}
         </button>
       </div>
