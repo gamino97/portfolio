@@ -25,6 +25,10 @@ const translations: Translation = {
     en: "Contact Me",
     es: "Contáctame",
   },
+  languageSelector: {
+    es: "Selector de Idioma",
+    en: "Language Selector",
+  },
 };
 
 export default translations;
