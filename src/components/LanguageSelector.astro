@@ -1,6 +1,8 @@
 ---
 import { Language } from "./typings";
 import type { BaseProps } from "./typings";
+import translations from "src/data/translations/navbar";
+
 export type Props = BaseProps;
 const { language } = Astro.props;
 const languageNames: Record<Language, string> = {
@@ -9,7 +11,10 @@ const languageNames: Record<Language, string> = {
 };
 ---
 
-<select class="language-selector">
+<label for="language-selector" class="sr-only"
+  >{translations.languageSelector[language]}</label
+>
+<select class="language-selector" id="language-selector">
   {
     Object.entries(Language).map(([keyLanguage, value]) => (
       <option value={value} selected={language === value}>
