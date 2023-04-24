@@ -29,7 +29,7 @@ const languageNames: Record<Language, string> = {
     document.querySelector<HTMLSelectElement>(".language-selector")!;
   select.addEventListener("change", () => {
     let newLocation = `/${select.value}`;
-    if (select.value === "en") {
+    if (select.value === "es") {
       newLocation = "/";
     }
     window.location.href = newLocation;
