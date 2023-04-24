@@ -1,5 +1,0 @@
-providers = ['...', 'staticfile']
-
-[start]
-  buildImage = 'ghcr.io/railwayapp/nixpacks:latest'
-  onlyIncludeFiles = ['./dist']
