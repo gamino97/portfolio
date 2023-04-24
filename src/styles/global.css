@@ -78,10 +78,10 @@ svg {
 }
 
 .btn {
-  color: hsl(var(--white));
+  color: hsl(var(--text));
   text-decoration: none;
   padding: var(--size-2) var(--size-fluid-4);
-  border-radius: var(--radius-1);
+  border-radius: var(--radius-2);
   cursor: pointer;
   border: none;
   font-size: var(--font-size-fluid-0);
