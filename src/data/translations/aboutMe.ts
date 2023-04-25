@@ -6,8 +6,8 @@ const translations: Translation = {
     es: "Sobre Mí",
   },
   photoAlt: {
-    en: "My photo",
-    es: "Mi fotografía",
+    en: "My desktop",
+    es: "Mi escritorio",
   },
   aboutText1: {
     en: "Hi! I'm Carlos Gamino, a Full Stack Web Developer from Xalapa, Veracruz graduated in Universidad Veracruzana.",
