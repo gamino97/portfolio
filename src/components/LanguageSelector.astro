@@ -11,9 +11,9 @@ const languageNames: Record<Language, string> = {
 };
 ---
 
-<label for="language-selector" class="sr-only"
-  >{translations.languageSelector[language]}</label
->
+<label for="language-selector" class="sr-only">
+  {translations.languageSelector[language]}
+</label>
 <select class="language-selector" id="language-selector">
   {
     Object.entries(Language).map(([keyLanguage, value]) => (
