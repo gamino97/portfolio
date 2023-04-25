@@ -63,7 +63,7 @@ const contactMeLinks = [
   .contact-links-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     gap: var(--size-fluid-1);
     justify-content: space-around;
   }
@@ -99,8 +99,8 @@ const contactMeLinks = [
   }
 
   .contact-link:nth-child(2) {
-    grid-column-start: 2;
-    grid-row-start: 2;
+    grid-column-start: initial;
+    grid-row-start: initial;
   }
 
   .icon-link {
@@ -123,6 +123,11 @@ const contactMeLinks = [
   }
 
   @media (min-width: 768px) {
+    .contact-link:nth-child(2) {
+      grid-column-start: 2;
+      grid-row-start: 2;
+    }
+
     .contact-wrapper {
       flex-direction: row;
     }
@@ -131,6 +136,7 @@ const contactMeLinks = [
       width: 50%;
       display: inline-grid;
       grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
     }
 
     form {
