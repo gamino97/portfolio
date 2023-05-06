@@ -9,6 +9,14 @@ const translations: Translation = {
     en: "Experience",
     es: "Experiencia",
   },
+  descriptionEhyatech: {
+    es: "8 meses como desarrollador backend.",
+    en: "8 months as backend developer.",
+  },
+  descriptionFreelance1: {
+    es: "8 meses como desarrollador backend.",
+    en: "8 months as backend developer.",
+  },
 };
 
 export default translations;
