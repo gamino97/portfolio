@@ -1,5 +1,4 @@
 import { defineConfig } from "astro/config";
-import image from "@astrojs/image";
 
 // https://astro.build/config
 import sitemap from "@astrojs/sitemap";
@@ -8,9 +7,6 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://www.carlos-gamino.dev",
   integrations: [
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
     sitemap({
       i18n: {
         defaultLocale: "es", // All urls that don't contain `es` or `fr` after `https://stargazers.club/` will be treated as default locale, i.e. `en`
