@@ -49,7 +49,11 @@ const contactMeLinks = [
         name="email"
         type="email"
       />
-      <Textarea label={translations.messageInput[language]} name="message" />
+      <Textarea
+        label={translations.messageInput[language]}
+        placeholder={translations.messageInput[language]}
+        name="message"
+      />
       <div class="form-action">
         <button class="btn btn-primary" type="submit">
           {translations.submitButton[language]}

@@ -132,11 +132,13 @@ h1 {
 
 h2 {
   font-size: var(--font-size-fluid-2);
-  margin: 0 0 var(--size-fluid-4);
+  scroll-margin: 0 0 var(--size-fluid-4);
+  color: hsl(var(--accent3));
 }
 
 h3 {
   font-size: var(--font-size-fluid-1);
+  color: hsl(var(--accent2));
 }
 
 h4 {
@@ -153,12 +155,13 @@ a {
 }
 
 .container {
-  --nav-height: calc(var(--size-fluid-5) * 0.75 + var(--size-fluid-2) * 3);
+  --nav-height: calc(var(--size-2) * 2 + 1rem + var(--size-fluid-2) * 2);
 
   width: 100%;
   margin: auto;
   max-width: 1500px;
-  padding: var(--nav-height) var(--size-fluid-2) 0;
+  padding: 0 var(--size-fluid-2) 0;
+  scroll-margin: var(--nav-height);
 }
 
 label {

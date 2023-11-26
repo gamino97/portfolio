@@ -2,15 +2,21 @@
 export interface Props {
   label: string;
   name: string;
+  placeholder: string;
 }
 
-const { label, name } = Astro.props;
+const { label, name, placeholder } = Astro.props;
 ---
 
 <div class="form-control">
   <label for={name}>{label}</label>
-  <textarea rows="6" name={name} id={name} aria-describedby={name} required>
-  </textarea>
+  <textarea
+    rows="6"
+    name={name}
+    id={name}
+    aria-describedby={name}
+    required
+    placeholder={placeholder}></textarea>
 </div>
 
 <style>

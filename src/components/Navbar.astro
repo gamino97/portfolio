@@ -6,7 +6,6 @@ import translations from "src/data/translations/navbar";
 
 export type Props = BaseProps;
 const { language } = Astro.props;
-import LanguageSelector from "./LanguageSelector.astro";
 ---
 
 <nav>
@@ -16,7 +15,6 @@ import LanguageSelector from "./LanguageSelector.astro";
       <span class="sr-only">Home</span>
     </a>
     <div class="nav-wrapper">
-      <LanguageSelector language={language} />
       <button
         class="btn btn-menu"
         id="menu-btn"
