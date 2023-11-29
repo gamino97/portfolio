@@ -1,25 +1,20 @@
 ---
 import { Icon } from "astro-icon";
-import type { BaseProps } from "./typings";
 import navLinks from "src/data/navbar";
-import translations from "src/data/translations/navbar";
-
-export type Props = BaseProps;
-const { language } = Astro.props;
 ---
 
 <nav>
   <div class="container nav-container">
-    <a href="#"
-      ><Icon name="logo" width={25} class="logo" />
-      <span class="sr-only">Home</span>
+    <a href="#">
+      <Icon name="logo" width={25} class="logo" />
+      <span class="sr-only">Inicio</span>
     </a>
     <div class="nav-wrapper">
       <button
         class="btn btn-menu"
         id="menu-btn"
         aria-expanded="false"
-        aria-label={translations.buttonArial[language]}
+        aria-label="Abrir navegación movil"
       >
         <Icon name="feather:menu" width={25} />
       </button>
@@ -28,7 +23,7 @@ const { language } = Astro.props;
           navLinks.map((link) => (
             <li role="none">
               <a href={link.url} class={`btn btn-${link.style} nav-link`}>
-                {translations[link.name][language]}
+                {link.name}
               </a>
             </li>
           ))
@@ -43,7 +38,7 @@ const { language } = Astro.props;
   navBtn.addEventListener("click", () => {
     navBtn.setAttribute(
       "aria-expanded",
-      navBtn.getAttribute("aria-expanded") === "false" ? "true" : "false"
+      navBtn.getAttribute("aria-expanded") === "false" ? "true" : "false",
     );
   });
   const navLinks = document.querySelectorAll<HTMLAnchorElement>(".nav-link");
@@ -91,7 +86,9 @@ const { language } = Astro.props;
     right: 0;
     text-align: center;
     border-bottom: initial;
-    transition: transform 0.4s, border-bottom 0s;
+    transition:
+      transform 0.4s,
+      border-bottom 0s;
     padding: var(--size-3);
     z-index: -1;
   }
@@ -108,7 +105,9 @@ const { language } = Astro.props;
   .btn-menu[aria-expanded="true"] + ul {
     transform: translateY(0);
     border-bottom: 2px solid hsl(var(--muted));
-    transition: transform 0.4s, border-bottom 0.1s ease 0.4s;
+    transition:
+      transform 0.4s,
+      border-bottom 0.1s ease 0.4s;
   }
 
   .btn-menu[aria-expanded="true"] {

@@ -2,12 +2,7 @@
 import InputText from "./InputText.astro";
 import Textarea from "./Textarea.astro";
 import { Icon } from "astro-icon";
-import type { BaseProps } from "./typings";
 
-import translations from "src/data/translations/contactMe";
-
-export type Props = BaseProps;
-const { language } = Astro.props;
 const contactMeLinks = [
   {
     href: "https://github.com/gamino97",
@@ -15,7 +10,7 @@ const contactMeLinks = [
     name: "Github",
   },
   {
-    href: "https://www.linkedin.com/in/carlos-alfredo-gamino-aparicio-86717a273",
+    href: "https://www.linkedin.com/in/carlos-alfredo-gamino-aparicio",
     icon: "simple-icons:linkedin",
     name: "LinkedIn",
   },
@@ -23,12 +18,12 @@ const contactMeLinks = [
 ---
 
 <section class="container" id="contact-me">
-  <h2>{translations.title[language]}</h2>
+  <h2>Contáctame</h2>
   <div class="contact-wrapper">
-    <ul class="contact-links-wrapper">
+    <ul>
       {
         contactMeLinks.map((link) => (
-          <li class="contact-link">
+          <li>
             <a href={link.href} class="icon-link">
               <Icon name={link.icon} width={256} />
               <span class="sr-only">{link.name}</span>
@@ -38,42 +33,28 @@ const contactMeLinks = [
       }
     </ul>
     <form action="https://formspree.io/f/mzbqykka" method="POST">
+      <InputText placeholder="Nombre" label="Nombre" name="name" />
       <InputText
-        placeholder={translations.nameInput[language]}
-        label={translations.nameInput[language]}
-        name="name"
-      />
-      <InputText
-        placeholder={translations.emailInput[language]}
-        label={translations.emailInput[language]}
+        placeholder="Correo electrónico"
+        label="Correo electrónico"
         name="email"
         type="email"
       />
-      <Textarea
-        label={translations.messageInput[language]}
-        placeholder={translations.messageInput[language]}
-        name="message"
-      />
+      <Textarea label="Mensaje" placeholder="Mensaje" name="message" />
       <div class="form-action">
-        <button class="btn btn-primary" type="submit">
-          {translations.submitButton[language]}
-        </button>
+        <button class="btn btn-primary" type="submit">Enviar</button>
       </div>
     </form>
   </div>
 </section>
 
 <style>
-  .contact-links-wrapper {
+  ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: var(--size-fluid-1);
     justify-content: space-around;
-  }
-
-  section {
-    text-align: center;
   }
 
   .contact-wrapper {
@@ -96,13 +77,13 @@ const contactMeLinks = [
     justify-content: flex-end;
   }
 
-  .contact-link {
+  li {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .contact-link:nth-child(2) {
+  li:nth-child(2) {
     grid-column-start: initial;
     grid-row-start: initial;
   }
@@ -127,7 +108,7 @@ const contactMeLinks = [
   }
 
   @media (min-width: 768px) {
-    .contact-link:nth-child(2) {
+    li:nth-child(2) {
       grid-column-start: 2;
       grid-row-start: 2;
     }
@@ -136,7 +117,7 @@ const contactMeLinks = [
       flex-direction: row;
     }
 
-    .contact-links-wrapper {
+    ul {
       width: 50%;
       display: inline-grid;
       grid-template-columns: 1fr 1fr;

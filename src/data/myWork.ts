@@ -15,8 +15,8 @@ interface Work {
 
 const myWorkData: Work[] = [
   {
-    name: "collaborativeTodoName",
-    description: "collaborativeTodoDescription",
+    name: "Collaborative To-Do List",
+    description: "Administra tus tareas",
     url: "https://collaborative-todo.up.railway.app/",
     github: "https://github.com/gamino97/collaborative-todo",
     img: {

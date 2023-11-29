@@ -3,15 +3,11 @@ import Icon from "astro-icon";
 import myWorkData from "src/data/myWork";
 import { Image } from "astro:assets";
 import Technologies from "./Technologies.astro";
-import translations from "src/data/translations/myWork";
-import type { BaseProps } from "./typings";
-
-export type Props = BaseProps;
-const { language } = Astro.props;
+const images = import.meta.glob("/src/images/*.{jpeg,jpg,png,gif}");
 ---
 
 <section class="container" id="my-work">
-  <h2>{translations.title[language]}</h2>
+  <h2>Mis proyectos</h2>
   <div class="work-card-wrapper">
     {
       myWorkData.map((work) => (
@@ -29,15 +25,14 @@ const { language } = Astro.props;
             )}
           </div>
           <Image
-            src={import(`../images/${work.img.src}.jpg`)}
+            src={images[`/src/images/${work.img.src}.jpg`]()}
             alt={work.img.alt}
             height={200}
-            format="webp"
-            position="center"
+            width={476}
           />
           <div class="card-content">
-            <h3>{translations[work.name][language]}</h3>
-            <p>{translations[work.description][language]}</p>
+            <h3>{work.name}</h3>
+            <p>{work.description}</p>
             <Technologies technologies={work.technologies} />
           </div>
         </div>
@@ -108,10 +103,6 @@ const { language } = Astro.props;
     justify-content: center;
     align-items: center;
     text-align: center;
-  }
-
-  h2 {
-    margin: 0 0 var(--size-fluid-4);
   }
 
   h3 {

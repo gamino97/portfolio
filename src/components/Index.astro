@@ -1,32 +1,25 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
-import AboutMe from "../components/AboutMe.astro";
-import Experience from "../components/Experience.astro";
-import MyWork from "../components/MyWork.astro";
+import Layout from "src/layouts/Layout.astro";
+import Hero from "src/components/Hero.astro";
+import AboutMe from "src/components/AboutMe.astro";
+import Experience from "src/components/Experience.astro";
+import MyWork from "src/components/MyWork.astro";
 import ContactMe from "src/components/ContactMe.astro";
 import Footer from "src/components/Footer.astro";
 import Navbar from "src/components/Navbar.astro";
-import type { BaseProps } from "./typings";
-import type { Translation } from "src/data/translations/typings";
-export type Props = BaseProps;
-const { language } = Astro.props;
-const translations: Translation = {
-  description: {
-    en: "Developer Carlos Gamino's portfolio.",
-    es: "Portfolio del desarrollador Carlos Gamino.",
-  },
-};
 ---
 
-<Layout title="Carlos Gamino" description={translations.description[language]}>
-  <Navbar language={language} />
+<Layout
+  title="Carlos Gamino"
+  description="Portfolio del desarrollador Carlos Gamino"
+>
+  <Navbar />
   <main>
-    <Hero language={language} />
-    <AboutMe language={language} />
-    <Experience language={language} />
-    <MyWork language={language} />
-    <ContactMe language={language} />
+    <Hero />
+    <AboutMe />
+    <Experience />
+    <MyWork />
+    <ContactMe />
   </main>
-  <Footer language={language} />
+  <Footer />
 </Layout>

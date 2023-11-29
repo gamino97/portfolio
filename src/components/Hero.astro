@@ -1,30 +1,25 @@
 ---
-import type { BaseProps } from "./typings";
 import myPhoto from "@images/photo.jpg";
 import { Image } from "astro:assets";
-import translations from "src/data/translations/hero";
 import { Icon } from "astro-icon";
 import resume from "/curriculum-vitae-carlos-gamino.pdf";
-
-const { language } = Astro.props;
-export type Props = BaseProps;
 ---
 
 <section class="container">
   <Image
     src={myPhoto}
-    alt={translations.pictureAlt[language]}
+    alt="Mi foto"
     width={1440}
-    format="webp"
+    height={1918}
     loading="eager"
   />
   <div class="details">
     <h1>Carlos Gamino</h1>
-    <h2>{translations.heroTitle[language]}</h2>
+    <h2>Desarrollador Web Full Stack</h2>
     <div class="buttons">
       <a class="btn btn-outline btn-tertiary" href={resume}>
         <Icon width={20} name="mdi:resume" />
-        <span>{translations.resume[language]}</span>
+        <span>CV</span>
       </a>
       <a
         class="btn btn-outline btn-tertiary"

@@ -1,33 +1,26 @@
-import { Language } from "src/components/typings";
-
 interface NavLink {
   name: string;
   url: string;
   style: string;
 }
 const navLinks: NavLink[] = [
-  /* {
-    name: "navlinkMain",
-    url: "#",
-    style: "transparent",
-  }, */
   {
-    name: "navlinkAbout",
+    name: "Sobre mí",
     url: "#about",
     style: "transparent",
   },
   {
-    name: "navlinkExperience",
+    name: "Experiencia",
     url: "#experience",
     style: "transparent",
   },
   {
-    name: "navlinkWork",
+    name: "Proyectos",
     url: "#my-work",
     style: "transparent",
   },
   {
-    name: "navlinkContact",
+    name: "Contáctame",
     url: "#contact-me",
     style: "primary",
   },

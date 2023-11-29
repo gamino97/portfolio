@@ -1,24 +1,17 @@
 ---
 import { Icon } from "astro-icon";
 import experiences from "src/data/experience";
-import translations from "src/data/translations/experience";
-import type { BaseProps } from "./typings";
-
-const { language } = Astro.props;
-export type Props = BaseProps;
 ---
 
 <section id="experience" class="container">
-  <h2>{translations.title[language]}</h2>
+  <h2>Experiencia</h2>
   <div class="experiences-wrapper">
     {
       experiences.map((experience) => (
         <div class="experience">
           <h3 class="experience-name">{experience.name}</h3>
           {experience.description && (
-            <p class="experience-description">
-              {translations[experience.description][language]}
-            </p>
+            <p class="experience-description">{experience.description}</p>
           )}
           <ul class="technologies-wrapper">
             {experience.technologies.map((technology) => (
@@ -39,10 +32,6 @@ export type Props = BaseProps;
 </section>
 
 <style>
-  h2 {
-    margin: 0 0 var(--size-fluid-4);
-  }
-
   .experiences-wrapper {
     display: grid;
     gap: var(--size-fluid-4);
@@ -58,7 +47,6 @@ export type Props = BaseProps;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: var(--size-fluid-1);
     text-align: center;
   }
 

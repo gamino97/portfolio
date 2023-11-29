@@ -9,7 +9,7 @@ interface Experience {
 const experiences: Experience[] = [
   {
     name: "Ehya Tech",
-    description: "descriptionEhyatech",
+    description: "8 meses como desarrollador backend",
     technologies: [
       { name: "Node.js", icon: "logos:nodejs-icon" },
       { name: "Express", icon: "simple-icons:express" },
@@ -22,7 +22,7 @@ const experiences: Experience[] = [
   },
   {
     name: "Freelance",
-    description: "descriptionFreelance1",
+    description: "8 meses como desarrollador fullstack",
     technologies: [
       { name: "Django Rest Framework", icon: "vscode-icons:file-type-django" },
       { name: "SQL", icon: "mdi:sql-query" },
@@ -36,7 +36,7 @@ const experiences: Experience[] = [
   },
   {
     name: "COVEICyDET",
-    description: "descriptionCoveicydet",
+    description: "7 meses como desarrollador junior",
     technologies: [
       { name: "Python", icon: "logos:python" },
       { name: "Django", icon: "logos:django-icon" },

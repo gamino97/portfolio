@@ -1,27 +1,22 @@
 ---
-import type { BaseProps } from "./typings";
 import { Image } from "astro:assets";
 import myDesktop from "@images/desktop.jpg";
-import translations from "src/data/translations/aboutMe";
-
-const { language } = Astro.props;
-export type Props = BaseProps;
 ---
 
 <section class="container" id="about">
-  <h2>{translations.title[language]}</h2>
+  <h2>Sobre Mí</h2>
   <div class="about-content">
-    <Image
-      src={myDesktop}
-      alt={translations.photoAlt[language]}
-      height={720}
-      width={1277}
-      format="webp"
-    />
+    <Image src={myDesktop} alt="Mi escritorio" height={720} width={1277} />
     <div class="about-text">
-      <p>{translations.aboutText1[language]}</p>
-      <p>{translations.aboutText2[language]}</p>
-      <p>{translations.aboutText3[language]}</p>
+      <p>
+        ¡Hola! Soy Carlos Gamino, un Desarrollador Web Full Stack de Xalapa,
+        Veracruz, graduado de la Universidad Veracruzana
+      </p>
+      <p>
+        +2 años en el mundo de la programación. Soy un apasionado de los
+        videojuegos y el fútbol.
+      </p>
+      <p>Terminé una maestría en Ingeniería Electrónica y Computación.</p>
     </div>
   </div>
 </section>
@@ -33,11 +28,6 @@ export type Props = BaseProps;
     margin: auto auto var(--size-fluid-2);
     object-fit: cover;
     padding: var(--size-fluid-2);
-  }
-
-  h2 {
-    text-align: center;
-    margin: 0 0 var(--size-fluid-4);
   }
 
   .about-content {

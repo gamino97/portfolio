@@ -4,5 +4,7 @@
     "stylelint-config-html",
     "stylelint-config-prettier"
   ],
-  
+  "rules": {
+    "media-feature-range-notation": "prefix"
+  }
 }

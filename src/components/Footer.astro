@@ -1,13 +1,14 @@
 ---
-import type { BaseProps } from "./typings";
-
-import translations from "src/data/translations/footer";
-
-export type Props = BaseProps;
-const { language } = Astro.props;
+import { Icon } from "astro-icon";
 ---
 
-<footer><p>{translations.text[language]}</p></footer>
+<footer>
+  <p>Hecho con 🚀Astro |&nbsp;</p>
+  <a href="https://github.com/gamino97/portfolio" class="">
+    Código Fuente&nbsp;
+    <Icon width={15} name="mdi:external-link" />
+  </a>
+</footer>
 
 <style>
   footer {
@@ -15,5 +16,16 @@ const { language } = Astro.props;
     justify-content: center;
     align-items: center;
     padding: var(--size-3) var(--size-5);
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(var(--accent2));
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 </style>

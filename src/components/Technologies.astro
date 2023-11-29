@@ -9,7 +9,7 @@ export interface Props {
 const { technologies } = Astro.props;
 ---
 
-<ul class="technologies-wrapper">
+<ul>
   {
     technologies.map((technology) => (
       <li>
@@ -25,7 +25,7 @@ const { technologies } = Astro.props;
 </ul>
 
 <style>
-  .technologies-wrapper {
+  ul {
     display: flex;
     gap: var(--size-fluid-1);
     flex-wrap: wrap;
@@ -33,7 +33,7 @@ const { technologies } = Astro.props;
     align-items: center;
   }
 
-  .technologies-wrapper > li {
+  ul > li {
     display: flex;
     align-items: center;
   }
