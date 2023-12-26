@@ -135,14 +135,14 @@ h1 {
 h2 {
   font-size: var(--font-size-fluid-2);
   scroll-margin: 0 0 var(--size-fluid-4);
-  color: hsl(var(--accent3));
+  color: hsl(var(--accent2));
   text-align: center;
   margin: 0 0 var(--size-fluid-4);
 }
 
 h3 {
   font-size: var(--font-size-fluid-1);
-  color: hsl(var(--accent2));
+  color: hsl(var(--accent3));
 }
 
 h4 {

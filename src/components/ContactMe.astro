@@ -55,6 +55,7 @@ const contactMeLinks = [
     grid-template-rows: 1fr;
     gap: var(--size-fluid-1);
     justify-content: space-around;
+    margin: 0 0 var(--size-fluid-4);
   }
 
   .contact-wrapper {
@@ -89,7 +90,7 @@ const contactMeLinks = [
   }
 
   .icon-link {
-    background-color: hsl(var(--accent2) / 70%);
+    background-color: hsl(var(--accent3) / 100%);
     border-radius: var(--radius-2);
     aspect-ratio: 1/1;
     height: var(--size-fluid-6);
@@ -97,7 +98,7 @@ const contactMeLinks = [
   }
 
   .icon-link:hover {
-    background-color: hsl(var(--accent2) / 100%);
+    background-color: hsl(var(--accent3) / 70%);
   }
 
   [astro-icon] {
@@ -122,6 +123,7 @@ const contactMeLinks = [
       display: inline-grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
+      margin: 0;
     }
 
     form {
