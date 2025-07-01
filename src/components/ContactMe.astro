@@ -1,7 +1,7 @@
 ---
 import InputText from "./InputText.astro";
 import Textarea from "./Textarea.astro";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 const contactMeLinks = [
   {
@@ -25,7 +25,7 @@ const contactMeLinks = [
         contactMeLinks.map((link) => (
           <li>
             <a href={link.href} class="icon-link">
-              <Icon name={link.icon} width={256} />
+              <Icon name={link.icon} width={256} height={256} />
               <span class="sr-only">{link.name}</span>
             </a>
           </li>
@@ -101,7 +101,7 @@ const contactMeLinks = [
     background-color: hsl(var(--accent3) / 70%);
   }
 
-  [astro-icon] {
+  [data-icon] {
     margin: auto;
     padding: var(--size-1);
     mask-composite: exclude;

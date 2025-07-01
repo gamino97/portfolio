@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import experiences from "src/data/experience";
 ---
 
@@ -19,6 +19,7 @@ import experiences from "src/data/experience";
                 <Icon
                   name={technology.icon}
                   width={25}
+                  height={25}
                   class:list={["technology-icon", technology.className]}
                 />
                 <span>{technology.name}</span>

@@ -1,7 +1,7 @@
 ---
 import myPhoto from "@images/photo.jpg";
 import { Image } from "astro:assets";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import resume from "/curriculum-vitae-carlos-gamino.pdf";
 ---
 
@@ -18,14 +18,14 @@ import resume from "/curriculum-vitae-carlos-gamino.pdf";
     <h2>Desarrollador Web Full Stack</h2>
     <div class="buttons">
       <a class="btn btn-outline btn-tertiary" href={resume}>
-        <Icon width={20} name="mdi:resume" />
+        <Icon width={20} height={20} name="mdi:resume" />
         <span>CV</span>
       </a>
       <a
         class="btn btn-outline btn-tertiary"
         href="https://github.com/gamino97"
       >
-        <Icon width={20} name="simple-icons:github" />
+        <Icon width={20} height={20} name="simple-icons:github" />
         <span>Github</span>
       </a>
     </div>

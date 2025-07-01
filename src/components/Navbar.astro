@@ -1,12 +1,12 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import navLinks from "src/data/navbar";
 ---
 
 <nav>
   <div class="container nav-container">
     <a href="#">
-      <Icon name="logo" width={25} class="logo" />
+      <Icon name="logo" width={25} height={25} class="logo" />
       <span class="sr-only">Inicio</span>
     </a>
     <div class="nav-wrapper">
@@ -16,7 +16,7 @@ import navLinks from "src/data/navbar";
         aria-expanded="false"
         aria-label="Abrir navegación movil"
       >
-        <Icon name="feather:menu" width={25} />
+        <Icon name="feather:menu" width={25} height={25} />
       </button>
       <ul role="navigation">
         {

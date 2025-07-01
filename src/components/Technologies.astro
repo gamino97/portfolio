@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import type { Technology } from "src/data/typings";
 
 export interface Props {
@@ -16,6 +16,7 @@ const { technologies } = Astro.props;
         <Icon
           name={technology.icon}
           width={25}
+          height={25}
           class:list={["technology-icon", technology.className]}
         />
         <span>{technology.name}</span>

@@ -1,5 +1,5 @@
 ---
-import Icon from "astro-icon";
+import { Icon } from "astro-icon/components";
 import myWorkData from "src/data/myWork";
 import { Image } from "astro:assets";
 import Technologies from "./Technologies.astro";
@@ -14,12 +14,12 @@ const images = import.meta.glob("/src/images/*.{jpeg,jpg,png,gif}");
         <div class="work-card">
           <div class="icons-wrapper">
             <a href={work.url} class="icon-link">
-              <Icon name="ph:link-simple-bold" width={60} />
+              <Icon name="mdi:link-variant" width={60} height={60} />
               <span>Web</span>
             </a>
             {work.github && (
               <a href={work.github} class="icon-link">
-                <Icon name="simple-icons:github" width={60} />
+                <Icon name="simple-icons:github" width={60} height={60} />
                 <span>Github</span>
               </a>
             )}
@@ -92,7 +92,7 @@ const images = import.meta.glob("/src/images/*.{jpeg,jpg,png,gif}");
     background-color: hsl(var(--accent1) / 95%);
   }
 
-  [astro-icon] {
+  [data-icon] {
     color: hsl(var(--white));
     margin: auto;
   }
