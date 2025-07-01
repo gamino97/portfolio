@@ -1,9 +1,14 @@
 ---
 import { Icon } from "astro-icon/components";
-import myWorkData from "src/data/myWork";
 import { Image } from "astro:assets";
+import type { ImageMetadata } from 'astro';
+import myWorkData from "src/data/myWork";
 import Technologies from "./Technologies.astro";
-const images = import.meta.glob("/src/images/*.{jpeg,jpg,png,gif}");
+// Import all images from the images directory
+const imageModules = import.meta.glob<{ default: ImageMetadata }>("/src/images/*.jpg", { 
+  eager: true
+});
+
 ---
 
 <section class="container" id="my-work">
@@ -25,7 +30,7 @@ const images = import.meta.glob("/src/images/*.{jpeg,jpg,png,gif}");
             )}
           </div>
           <Image
-            src={images[`/src/images/${work.img.src}.jpg`]()}
+            src={imageModules[`/src/images/${work.img.src}.jpg`].default}
             alt={work.img.alt}
             height={200}
             width={476}

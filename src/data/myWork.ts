@@ -22,7 +22,7 @@ const myWorkData: Work[] = [
     img: {
       src: "collaborative-todo-list",
       width: 932,
-      alt: "Collaborative To-Do Image",
+      alt: "Collaborative To-Do Screenshot",
     },
     technologies: [
       { name: "Python", icon: "logos:python" },
