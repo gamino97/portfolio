@@ -1,8 +1,9 @@
 import type { Technology } from "./typings";
+import type { TranslationKey } from "src/i18n/typings";
 
 interface Work {
-  name: string;
-  description: string;
+  name: TranslationKey;
+  description: TranslationKey;
   url: string;
   github?: string;
   img: {
@@ -15,14 +16,14 @@ interface Work {
 
 const myWorkData: Work[] = [
   {
-    name: "Collaborative To-Do List",
-    description: "Administra tus tareas",
+    name: "mywork.collaborativeTodoName",
+    description: "mywork.collaborativeTodoDescription",
     url: "https://collaborative-todo.up.railway.app/",
     github: "https://github.com/gamino97/collaborative-todo",
     img: {
       src: "collaborative-todo-list",
       width: 932,
-      alt: "Collaborative To-Do Screenshot",
+      alt: "mywork.collaborativeTodoAlt",
     },
     technologies: [
       { name: "Python", icon: "logos:python" },

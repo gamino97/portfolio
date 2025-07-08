@@ -24,6 +24,10 @@ export const ui = {
     'experience.descriptionEhyatech': '8 months as backend developer',
     'experience.descriptionFreelance1': '8 months as fullstack developer',
     'experience.kentriki': '2 years as frontend developer',
+    'mywork.collaborativeTodoName': 'Collaborative To-Do List',
+    'mywork.collaborativeTodoDescription': 'Manage your tasks',
+    'mywork.collaborativeTodoAlt': 'Collaborative To-Do Screenshot',
+    'mywork.title': 'My work',
   },
   es: {
     'about.title': 'Sobre Mí',
@@ -43,5 +47,8 @@ export const ui = {
     'experience.descriptionEhyatech': '8 meses como desarrollador backend',
     'experience.descriptionFreelance1': '8 meses como desarrollador fullstack',
     'experience.kentriki': '2 años como desarrollador frontend',
+    'mywork.collaborativeTodoDescription': 'Administra tus tareas',
+    'mywork.collaborativeTodoAlt': 'Captura de pantalla de Collaborative To-Do',
+    'mywork.title': 'Mis proyectos',
   },
 } as const;
