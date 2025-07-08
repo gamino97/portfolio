@@ -1,11 +1,15 @@
 ---
 import { Icon } from "astro-icon/components";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer>
-  <p>Hecho con 🚀Astro |&nbsp;</p>
+  <p>{t("footer.text")} |&nbsp;</p>
   <a href="https://github.com/gamino97/portfolio" class="">
-    Código Fuente&nbsp;
+    {t("footer.source")}&nbsp;
     <Icon width={15} height={15} name="mdi:external-link" />
   </a>
 </footer>

@@ -33,6 +33,8 @@ export const ui = {
     'contactMe.emailInput': 'Email',
     'contactMe.messageInput': 'Message',
     'contactMe.submitButton': 'Submit',
+    'footer.text': 'Made with 🚀Astro',
+    'footer.source': 'Source code'
   },
   es: {
     'about.title': 'Sobre Mí',
@@ -60,5 +62,7 @@ export const ui = {
     'contactMe.emailInput': 'Correo electrónico',
     'contactMe.messageInput': 'Mensaje',
     'contactMe.submitButton': 'Enviar',
+    'footer.text': 'Hecho con 🚀Astro',
+    'footer.source': 'Código fuente'
   },
 } as const;
