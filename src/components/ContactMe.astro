@@ -2,7 +2,10 @@
 import InputText from "./InputText.astro";
 import Textarea from "./Textarea.astro";
 import { Icon } from "astro-icon/components";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const contactMeLinks = [
   {
     href: "https://github.com/gamino97",
@@ -18,14 +21,14 @@ const contactMeLinks = [
 ---
 
 <section class="container" id="contact-me">
-  <h2>Contáctame</h2>
+  <h2>{t("contactMe.title")}</h2>
   <div class="contact-wrapper">
     <ul>
       {
         contactMeLinks.map((link) => (
           <li>
             <a href={link.href} class="icon-link">
-              <Icon name={link.icon}/>
+              <Icon name={link.icon} />
               <span class="sr-only">{link.name}</span>
             </a>
           </li>
@@ -33,16 +36,26 @@ const contactMeLinks = [
       }
     </ul>
     <form action="https://formspree.io/f/mzbqykka" method="POST">
-      <InputText placeholder="Nombre" label="Nombre" name="name" />
       <InputText
-        placeholder="Correo electrónico"
-        label="Correo electrónico"
+        placeholder={t("contactMe.nameInput")}
+        label={t("contactMe.nameInput")}
+        name="name"
+      />
+      <InputText
+        placeholder={t("contactMe.emailInput")}
+        label={t("contactMe.emailInput")}
         name="email"
         type="email"
       />
-      <Textarea label="Mensaje" placeholder="Mensaje" name="message" />
+      <Textarea
+        label={t("contactMe.messageInput")}
+        placeholder={t("contactMe.messageInput")}
+        name="message"
+      />
       <div class="form-action">
-        <button class="btn btn-primary" type="submit">Enviar</button>
+        <button class="btn btn-primary" type="submit"
+          >{t("contactMe.submitButton")}</button
+        >
       </div>
     </form>
   </div>

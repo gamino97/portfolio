@@ -28,6 +28,11 @@ export const ui = {
     'mywork.collaborativeTodoDescription': 'Manage your tasks',
     'mywork.collaborativeTodoAlt': 'Collaborative To-Do Screenshot',
     'mywork.title': 'My work',
+    'contactMe.title': 'Contact Me',
+    'contactMe.nameInput': 'Name',
+    'contactMe.emailInput': 'Email',
+    'contactMe.messageInput': 'Message',
+    'contactMe.submitButton': 'Submit',
   },
   es: {
     'about.title': 'Sobre Mí',
@@ -50,5 +55,10 @@ export const ui = {
     'mywork.collaborativeTodoDescription': 'Administra tus tareas',
     'mywork.collaborativeTodoAlt': 'Captura de pantalla de Collaborative To-Do',
     'mywork.title': 'Mis proyectos',
+    'contactMe.title': 'Contáctame',
+    'contactMe.nameInput': 'Nombre',
+    'contactMe.emailInput': 'Correo electrónico',
+    'contactMe.messageInput': 'Mensaje',
+    'contactMe.submitButton': 'Enviar',
   },
 } as const;
