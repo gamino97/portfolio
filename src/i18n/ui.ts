@@ -19,6 +19,10 @@ export const ui = {
     'nav.linkWork': 'Work',
     'nav.linkContact': 'Contact Me',
     'languageSelector': 'Language Selector',
+    'experience.descriptionCoveicydet': '7 months as fullstack developer.',
+    'experience.title': 'Experience',
+    'experience.descriptionEhyatech': '8 months as backend developer.',
+    'experience.descriptionFreelance1': '8 months as fullstack developer.',
   },
   es: {
     'about.title': 'Sobre Mí',
@@ -33,5 +37,9 @@ export const ui = {
     'nav.linkWork': 'Proyectos',
     'nav.linkContact': 'Contáctame',
     'languageSelector': 'Selector de Idioma',
+    'experience.descriptionCoveicydet': '7 meses como desarrollador fullstack',
+    'experience.title': 'Experiencia',
+    'experience.descriptionEhyatech': '8 meses como desarrollador backend',
+    'experience.descriptionFreelance1': '8 meses como desarrollador fullstack',
   },
 } as const;

@@ -1,15 +1,16 @@
 import type { Technology } from "./typings";
+import type { TranslationKey } from "src/i18n/typings";
 
 interface Experience {
   name: string;
-  description?: string;
+  description?: TranslationKey;
   technologies: Technology[];
 }
 
 const experiences: Experience[] = [
   {
     name: "Ehya Tech",
-    description: "8 meses como desarrollador backend",
+    description: "experience.descriptionEhyatech",
     technologies: [
       { name: "Node.js", icon: "logos:nodejs-icon" },
       { name: "Express", icon: "simple-icons:express" },
@@ -22,7 +23,7 @@ const experiences: Experience[] = [
   },
   {
     name: "Freelance",
-    description: "8 meses como desarrollador fullstack",
+    description: "experience.descriptionFreelance1",
     technologies: [
       { name: "Django Rest Framework", icon: "logos:django-icon" },
       { name: "SQL", icon: "mdi:sql-query" },
@@ -36,7 +37,7 @@ const experiences: Experience[] = [
   },
   {
     name: "COVEICyDET",
-    description: "7 meses como desarrollador junior",
+    description: "experience.descriptionCoveicydet",
     technologies: [
       { name: "Python", icon: "logos:python" },
       { name: "Django", icon: "logos:django-icon" },
