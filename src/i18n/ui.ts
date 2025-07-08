@@ -34,7 +34,10 @@ export const ui = {
     'contactMe.messageInput': 'Message',
     'contactMe.submitButton': 'Submit',
     'footer.text': 'Made with 🚀Astro',
-    'footer.source': 'Source code'
+    'footer.source': 'Source code',
+    'hero.heroTitle': 'Full Stack Web Developer',
+    'hero.pictureAlt': 'My picture',
+    'hero.resume': 'Resume',
   },
   es: {
     'about.title': 'Sobre Mí',
@@ -63,6 +66,9 @@ export const ui = {
     'contactMe.messageInput': 'Mensaje',
     'contactMe.submitButton': 'Enviar',
     'footer.text': 'Hecho con 🚀Astro',
-    'footer.source': 'Código fuente'
-  },
+    'footer.source': 'Código fuente',
+    'hero.heroTitle': 'Desarrollador Web Full Stack',
+    'hero.pictureAlt': 'Mi foto',
+    'hero.resume': 'CV',
+  }
 } as const;
