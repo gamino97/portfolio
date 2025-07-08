@@ -1,26 +1,29 @@
+
+import type { defaultLang, ui } from "src/i18n/ui";
+
 interface NavLink {
-  name: string;
+  name: keyof typeof ui[typeof defaultLang];
   url: string;
   style: string;
 }
 const navLinks: NavLink[] = [
   {
-    name: "Sobre mí",
+    name: "nav.linkAbout",
     url: "#about",
     style: "transparent",
   },
   {
-    name: "Experiencia",
+    name: "nav.linkExperience",
     url: "#experience",
     style: "transparent",
   },
   {
-    name: "Proyectos",
+    name: "nav.linkWork",
     url: "#my-work",
     style: "transparent",
   },
   {
-    name: "Contáctame",
+    name: "nav.linkContact",
     url: "#contact-me",
     style: "primary",
   },
