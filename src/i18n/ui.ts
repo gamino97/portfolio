@@ -57,6 +57,7 @@ export const ui = {
     'experience.descriptionEhyatech': '8 meses como desarrollador backend',
     'experience.descriptionFreelance1': '8 meses como desarrollador fullstack',
     'experience.kentriki': '2 años como desarrollador frontend',
+    'mywork.collaborativeTodoName': 'Lista de tareas colaborativa',
     'mywork.collaborativeTodoDescription': 'Administra tus tareas',
     'mywork.collaborativeTodoAlt': 'Captura de pantalla de Collaborative To-Do',
     'mywork.title': 'Mis proyectos',
