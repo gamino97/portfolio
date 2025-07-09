@@ -1,22 +1,24 @@
 ---
 import { Image } from "astro:assets";
 import myDesktop from "@images/desktop.jpg";
+import { getLangFromUrl, useTranslations } from 'src/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="container" id="about">
-  <h2>Sobre Mí</h2>
+  <h2>{t('about.title')}</h2>
   <div class="about-content">
-    <Image src={myDesktop} alt="Mi escritorio" height={720} width={1277} />
+    <Image src={myDesktop} alt={t('about.photoAlt')} height={720} width={1277} />
     <div class="about-text">
       <p>
-        ¡Hola! Soy Carlos Gamino, un Desarrollador Web Full Stack de Xalapa,
-        Veracruz, graduado de la Universidad Veracruzana
+        {t('about.text1')}
       </p>
       <p>
-        +2 años en el mundo de la programación. Soy un apasionado de los
-        videojuegos y el fútbol.
+        {t('about.text2')}
       </p>
-      <p>Terminé una maestría en Ingeniería Electrónica y Computación.</p>
+      <p>{t('about.text3')}</p>
     </div>
   </div>
 </section>

@@ -1,17 +1,21 @@
 ---
 import { Icon } from "astro-icon/components";
 import experiences from "src/data/experience";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="experience" class="container">
-  <h2>Experiencia</h2>
+  <h2>{t("experience.title")}</h2>
   <div class="experiences-wrapper">
     {
       experiences.map((experience) => (
         <div class="experience">
           <h3 class="experience-name">{experience.name}</h3>
           {experience.description && (
-            <p class="experience-description">{experience.description}</p>
+            <p class="experience-description">{t(experience.description)}</p>
           )}
           <ul class="technologies-wrapper">
             {experience.technologies.map((technology) => (

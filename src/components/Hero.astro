@@ -3,23 +3,27 @@ import myPhoto from "@images/photo.jpg";
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import resume from "/curriculum-vitae-carlos-gamino.pdf";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="container">
   <Image
     src={myPhoto}
-    alt="Mi foto"
+    alt={t("hero.pictureAlt")}
     width={1440}
     height={1918}
     loading="eager"
   />
   <div class="details">
     <h1>Carlos Gamino</h1>
-    <h2>Desarrollador Web Full Stack</h2>
+    <h2>{t("hero.heroTitle")}</h2>
     <div class="buttons">
       <a class="btn btn-outline btn-tertiary" href={resume}>
         <Icon width={20} height={20} name="mdi:resume" />
-        <span>CV</span>
+        <span>{t("hero.resume")}</span>
       </a>
       <a
         class="btn btn-outline btn-tertiary"

@@ -1,20 +1,26 @@
 ---
 import { Icon } from "astro-icon/components";
 import navLinks from "src/data/navbar";
+import { getLangFromUrl, useTranslations } from 'src/i18n/utils';
+import LanguageSelector from "src/components/LanguageSelector.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <nav>
   <div class="container nav-container">
     <a href="/">
       <Icon name="logo" width={25} height={25} class="logo" />
-      <span class="sr-only">Inicio</span>
+      <span class="sr-only">{t('nav.linkMain')}</span>
     </a>
     <div class="nav-wrapper">
+      <LanguageSelector />
       <button
         class="btn btn-menu"
         id="menu-btn"
         aria-expanded="false"
-        aria-label="Abrir navegación movil"
+        aria-label={t('nav.buttonArial')}
       >
         <Icon name="feather:menu" width={25} height={25} />
       </button>
@@ -23,7 +29,7 @@ import navLinks from "src/data/navbar";
           navLinks.map((link) => (
             <li role="none">
               <a href={link.url} class={`btn btn-${link.style} nav-link`}>
-                {link.name}
+                {t(link.name)}
               </a>
             </li>
           ))
