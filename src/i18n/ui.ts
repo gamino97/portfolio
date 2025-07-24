@@ -38,6 +38,7 @@ export const ui = {
     'hero.heroTitle': 'Full Stack Web Developer',
     'hero.pictureAlt': 'My picture',
     'hero.resume': 'Resume',
+    'hero.resumeUrl': import.meta.env.RESUME_URL_EN,
   },
   es: {
     'about.title': 'Sobre Mí',
@@ -71,5 +72,6 @@ export const ui = {
     'hero.heroTitle': 'Desarrollador Web Full Stack',
     'hero.pictureAlt': 'Mi foto',
     'hero.resume': 'CV',
+    'hero.resumeUrl': import.meta.env.RESUME_URL_ES,
   }
 } as const;
