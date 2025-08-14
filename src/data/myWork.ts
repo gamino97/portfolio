@@ -9,6 +9,7 @@ interface Work {
   img: {
     src: string;
     width?: number;
+    height?: number;
     alt: string;
   };
   technologies: Technology[];
@@ -22,7 +23,8 @@ const myWorkData: Work[] = [
     github: "https://github.com/gamino97/collaborative-todo",
     img: {
       src: "collaborative-todo-list",
-      width: 932,
+      width: 600,
+      height: 291,
       alt: "mywork.collaborativeTodoAlt",
     },
     technologies: [
@@ -36,6 +38,28 @@ const myWorkData: Work[] = [
       { name: "React", icon: "logos:react" },
       { name: "TypeScript", icon: "logos:typescript-icon" },
       { name: "Docker", icon: "logos:docker-icon" },
+    ],
+  },
+  {
+    name: "mywork.ecommerceAdminName",
+    description: "mywork.ecommerceAdminDescription",
+    url: "https://ecommerce-admin-production-da3c.up.railway.app/",
+    github: "https://github.com/gamino97/ecommerce-admin",
+    img: {
+      src: "ecommerce-admin",
+      width: 600,
+      height: 291,
+      alt: "mywork.ecommerceAdminAlt",
+    },
+    technologies: [
+      {
+        name: "Next.js",
+        icon: "simple-icons:nextdotjs",
+      },
+      { name: "Supabase", icon: "logos:supabase-icon" },
+      { name: "React", icon: "logos:react" },
+      { name: "TypeScript", icon: "logos:typescript-icon" },
+      { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
     ],
   },
 ];
