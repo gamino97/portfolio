@@ -8,6 +8,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://www.carlos-gamino.dev",
   integrations: [sitemap(), icon()],
+  trailingSlash: "always",
   i18n: {
     locales: ["es", "en"],
     defaultLocale: "en",
