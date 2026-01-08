@@ -23,7 +23,7 @@ const t = useTranslations(language);
   const select =
     document.querySelector<HTMLSelectElement>(".language-selector")!;
   select.addEventListener("change", () => {
-    let newLocation = `/${select.value}`;
+    let newLocation = `/${select.value}/`;
     if (select.value === "en") {
       newLocation = "/";
     }
