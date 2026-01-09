@@ -62,6 +62,30 @@ const myWorkData: Work[] = [
       { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
     ],
   },
+  {
+    name: "mywork.ecommerceStorefrontName",
+    description: "mywork.ecommerceStorefrontDescription",
+    url: "https://ecommerce-portfolio-production.up.railway.app/",
+    github: "https://github.com/gamino97/ecommerce-portfolio",
+    img: {
+      src: "ecommerce-storefront",
+      width: 1512,
+      height: 585,
+      alt: "mywork.ecommerceStorefrontAlt",
+    },
+    technologies: [
+      {
+        name: "Next.js",
+        icon: "simple-icons:nextdotjs",
+      },
+      { name: "Python", icon: "logos:python" },
+      { name: "FastAPI", icon: "logos:fastapi-icon" },
+      { name: "PostgreSQL", icon: "logos:postgresql" },
+      { name: "React", icon: "logos:react" },
+      { name: "TypeScript", icon: "logos:typescript-icon" },
+      { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
+    ],
+  }
 ];
 
 export default myWorkData;
