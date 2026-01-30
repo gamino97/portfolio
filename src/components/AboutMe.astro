@@ -1,24 +1,29 @@
 ---
 import { Image } from "astro:assets";
 import myDesktop from "@images/desktop.jpg";
-import { getLangFromUrl, useTranslations } from 'src/i18n/utils';
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <section class="container" id="about">
-  <h2>{t('about.title')}</h2>
+  <h2>{t("about.title")}</h2>
   <div class="about-content">
-    <Image src={myDesktop} alt={t('about.photoAlt')} height={720} width={1277} />
+    <Image
+      src={myDesktop}
+      alt={t("about.photoAlt")}
+      height={720}
+      width={1277}
+    />
     <div class="about-text">
       <p>
-        {t('about.text1')}
+        {t("about.text1")}
       </p>
       <p>
-        {t('about.text2')}
+        {t("about.text2")}
       </p>
-      <p>{t('about.text3')}</p>
+      <p>{t("about.text3")}</p>
     </div>
   </div>
 </section>

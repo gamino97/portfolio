@@ -1,8 +1,7 @@
-
 import type { defaultLang, ui } from "src/i18n/ui";
 
 interface NavLink {
-  name: keyof typeof ui[typeof defaultLang];
+  name: keyof (typeof ui)[typeof defaultLang];
   url: string;
   style: string;
 }

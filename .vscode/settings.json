@@ -36,9 +36,19 @@
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "prettier.documentSelectors": [
-    "**/*.{astro,ts,js,jsx,tsx}"
-  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.documentSelectors": ["**/*.{astro,ts,js,jsx,tsx}"],
   "editor.formatOnSave": true,
   "cssvar.files": [
     "./node_modules/open-props/open-props.min.css",
@@ -50,11 +60,5 @@
   // Do not ignore node_modules css files, which is ignored by default
   "cssvar.ignore": [],
   // add support for autocomplete in JS or JS like files
-  "cssvar.extensions": [
-    "css",
-    "postcss",
-    "jsx",
-    "tsx",
-    "astro"
-  ]
+  "cssvar.extensions": ["css", "postcss", "jsx", "tsx", "astro"]
 }

@@ -1,7 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import navLinks from "src/data/navbar";
-import { getLangFromUrl, useTranslations } from 'src/i18n/utils';
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 import LanguageSelector from "src/components/LanguageSelector.astro";
 
 const lang = getLangFromUrl(Astro.url);
@@ -12,7 +12,7 @@ const t = useTranslations(lang);
   <div class="container nav-container">
     <a href="/">
       <Icon name="logo" width={25} height={25} class="logo" />
-      <span class="sr-only">{t('nav.linkMain')}</span>
+      <span class="sr-only">{t("nav.linkMain")}</span>
     </a>
     <div class="nav-wrapper">
       <LanguageSelector />
@@ -20,7 +20,7 @@ const t = useTranslations(lang);
         class="btn btn-menu"
         id="menu-btn"
         aria-expanded="false"
-        aria-label={t('nav.buttonArial')}
+        aria-label={t("nav.buttonArial")}
       >
         <Icon name="feather:menu" width={25} height={25} />
       </button>
