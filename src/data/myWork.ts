@@ -85,7 +85,28 @@ const myWorkData: Work[] = [
       { name: "TypeScript", icon: "logos:typescript-icon" },
       { name: "Tailwind CSS", icon: "logos:tailwindcss-icon" },
     ],
-  }
+  },
+  {
+    name: "mywork.combustometerName",
+    description: "mywork.combustometerDescription",
+    url: "https://expo.dev/accounts/carlos_gamino/projects/combustometer/builds/3c6e792d-68d8-4031-b551-299cceeb5244",
+    github: "https://github.com/gamino97/combustometer",
+    img: {
+      src: "combustometer",
+      width: 1512,
+      height: 585,
+      alt: "mywork.combustometerAlt",
+    },
+    technologies: [
+      {
+        name: "React Native",
+        icon: "logos:react",
+      },
+      { name: "Expo", icon: "simple-icons:expo" },
+      { name: "TypeScript", icon: "logos:typescript-icon" },
+      { name: "SQLite", icon: "logos:sqlite" },
+    ],
+  },
 ];
 
 export default myWorkData;
