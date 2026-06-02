@@ -19,7 +19,7 @@ const myWorkData: Work[] = [
   {
     name: "mywork.collaborativeTodoName",
     description: "mywork.collaborativeTodoDescription",
-    url: "https://collaborative-todo.up.railway.app/",
+    url: "https://todo.carlos-gamino.dev/",
     github: "https://github.com/gamino97/collaborative-todo",
     img: {
       src: "collaborative-todo-list",
@@ -43,7 +43,7 @@ const myWorkData: Work[] = [
   {
     name: "mywork.ecommerceAdminName",
     description: "mywork.ecommerceAdminDescription",
-    url: "https://ecommerce-admin-production-da3c.up.railway.app/",
+    url: "https://eadmin.carlos-gamino.dev/",
     github: "https://github.com/gamino97/ecommerce-admin",
     img: {
       src: "ecommerce-admin",
@@ -65,7 +65,7 @@ const myWorkData: Work[] = [
   {
     name: "mywork.ecommerceStorefrontName",
     description: "mywork.ecommerceStorefrontDescription",
-    url: "https://ecommerce-portfolio-production.up.railway.app/",
+    url: "https://ecommerce.carlos-gamino.dev/",
     github: "https://github.com/gamino97/ecommerce-portfolio",
     img: {
       src: "ecommerce-storefront",
