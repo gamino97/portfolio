@@ -11,10 +11,8 @@ export const ui = {
     "about.photoAlt": "My desktop",
     "about.text1":
       "Hi! I'm Carlos Gamino, a Full Stack Web Developer from Xalapa, Veracruz, graduated in Universidad Veracruzana.",
-    "about.text2":
-      "+4 years in the programming world. I'm a passionate about videogames and football.",
-    "about.text3":
-      "I completed a master's degree in Electronic Engineering and Computer Science.",
+    "about.text2": "+5 years in the programming world.",
+    "about.text3": "I'm a passionate about videogames and football.",
     "nav.buttonArial": "Open mobile nav",
     "nav.linkMain": "Main",
     "nav.linkAbout": "About",
@@ -58,10 +56,8 @@ export const ui = {
     "about.photoAlt": "Mi escritorio",
     "about.text1":
       "¡Hola! Soy Carlos Gamino, un Desarrollador Web Full Stack de Xalapa, Veracruz, graduado de la Universidad Veracruzana",
-    "about.text2":
-      "+4 años en el mundo de la programación. Soy un apasionado de los videojuegos y el fútbol.",
-    "about.text3":
-      "Terminé una maestría en Ingeniería Electrónica y Computación.",
+    "about.text2": "+5 años en el mundo de la programación.",
+    "about.text3": "Soy un apasionado de los videojuegos y el fútbol.",
     "nav.buttonArial": "Abrir navegación movil",
     "nav.linkMain": "Inicio",
     "nav.linkAbout": "Sobre mí",
